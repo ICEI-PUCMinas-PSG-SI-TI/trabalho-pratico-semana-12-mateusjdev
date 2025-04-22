@@ -70,174 +70,157 @@
         </div>
     </nav>
 
-    <!-- Conteúdo -->
-    <div class="container-fluid m-0 g-0 p-4">
+    <div class="d-flex w-100 justify-content-center">
+        <!-- Conteúdo -->
+        <div class="avoid-large container-fluid m-0 g-0 p-4">
 
-        <!-- Seção 1: Itens em Destaque -->
-        <!-- TODO:
+            <!-- Seção 1: Itens em Destaque -->
+            <!-- TODO:
         const carousel = new bootstrap.Carousel('#myCarousel')
         -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">
-                    <h5>
-                        <strong>Itens em destaque</strong>
-                    </h5>
-                </li>
-            </ol>
-        </nav>
-        <hr>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <h5>
+                            <strong>Itens em destaque</strong>
+                        </h5>
+                    </li>
+                </ol>
+            </nav>
+            <hr>
 
-        <section>
-            <div id="destaque" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <a class="no-text-decoration" href="detalhes.html?id=1">
-                            <img src="assets/img/banner/banner_wide_1.webp" class="d-block w-100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="black-text-white-background">Silicon Valley</h5>
-                            </div>
-                        </a>
+            <section>
+                <div id="destaque" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a class="no-text-decoration" href="detalhes.html?id=1">
+                                <img src="assets/img/banner/banner_wide_1.webp" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="black-text-white-background">Silicon Valley</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a class="no-text-decoration" href="detalhes.html?id=8">
+                                <img src="assets/img/banner/banner_wide_8.webp" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="black-text-white-background">The Last of Us</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a class="no-text-decoration" href="detalhes.html?id=9">
+                                <img src="assets/img/banner/banner_wide_9.webp" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="black-text-white-background">Ruptura</h5>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <a class="no-text-decoration" href="detalhes.html?id=8">
-                            <img src="assets/img/banner/banner_wide_8.webp" class="d-block w-100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="black-text-white-background">The Last of Us</h5>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="carousel-item">
-                        <a class="no-text-decoration" href="detalhes.html?id=9">
-                            <img src="assets/img/banner/banner_wide_9.webp" class="d-block w-100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="black-text-white-background">Ruptura</h5>
-                            </div>
-                        </a>
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#destaque" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon black-text-white-background-button"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#destaque" data-bs-slide="next">
+                        <span class="carousel-control-next-icon black-text-white-background-button"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#destaque" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon black-text-white-background-button"
-                        aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#destaque" data-bs-slide="next">
-                    <span class="carousel-control-next-icon black-text-white-background-button"
-                        aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </section>
+            </section>
 
-        <!-- Espaço vazio -->
-        <div class="mt-4">
+            <!-- Espaço vazio -->
+            <div class="mt-4">
+            </div>
+
+            <!-- Seção 2: Grupo de cards -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <h5>
+                            <strong>Todos os itens</strong>
+                        </h5>
+                    </li>
+                </ol>
+            </nav>
+            <hr>
+
+            <section>
+                <div id="cards-filmes" class="row row-cols-1 row-cols-md-2 g-4"></div>
+
+            </section>
+
+            <!-- Espaço vazio -->
+            <div class="mt-4">
+            </div>
+
+            <!-- Seção 3 - Informações sobre o autor -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <h5>
+                            <strong>Informações do Aluno</strong>
+                        </h5>
+                    </li>
+                </ol>
+            </nav>
+            <hr>
+
+            <section class="row">
+                <div class="col-sm-8">
+                    <h6><strong>Sobre</strong></h6>
+                    <hr>
+                    <p>Sempre interessado na área da computação e independente da linguagem, busco sempre estar em
+                        constante
+                        aprendizado.</p>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="row m-0 p-0 g-0">
+                        <h6><strong>Autoria</strong></h6>
+                        <hr>
+                        <p>Aluno: Mateus J. S. Santana</p>
+                        <p>Curso: Sistemas de Informação</p>
+                        <p>Turma: Manhâ</p>
+                    </div>
+                    <div class="row m-0 p-0 g-0">
+                        <h6><strong>Redes Sociais</strong></h6>
+                        <hr>
+                        <div class="d-flex flex-column">
+                            <a class="no-text-decoration">
+                                <img class="social-icon" src="assets/img/social/github.svg"
+                                    href="https://github.com/mateusjdev">
+                            </a>
+                        </div>
+
+                    </div>
+            </section>
+
         </div>
-
-        <!-- Seção 2: Grupo de cards -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">
-                    <h5>
-                        <strong>Todos os itens</strong>
-                    </h5>
-                </li>
-            </ol>
-        </nav>
-        <hr>
-
-        <section>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card">
-                        <img src="assets/img/banner/banner_wide_1.webp" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="assets/img/banner/banner_wide_1.webp" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="assets/img/banner/banner_wide_1.webp" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to
-                                additional content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="assets/img/banner/banner_wide_1.webp" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to
-                                additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Espaço vazio -->
-        <div class="mt-4">
-        </div>
-
-        <!-- Seção 3 - Informações sobre o autor -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">
-                    <h5>
-                        <strong>Informações do Aluno</strong>
-                    </h5>
-                </li>
-            </ol>
-        </nav>
-        <hr>
-
-        <section class="row">
-            <div class="col-8">
-                <h6><strong>Sobre</strong></h6>
-                <hr>
-                <p>Sempre interessado na área da computação e independente da linguagem, busco sempre estar em constante
-                    aprendizado.</p>
-            </div>
-
-            <div class="col-4">
-                <h6><strong>Autoria</strong></h6>
-                <hr>
-                <p>Aluno: Mateus J. S. Santana</p>
-                <p>Curso: Sistemas de Informação</p>
-                <p>Turma: Manhâ</p>
-                <h6><strong>Redes Sociais</strong></h6>
-                <hr>
-                <div class="d-flex flex-column">
-                    <a class="no-text-decoration">
-                        <img class="social-icon" src="assets/img/social/github.svg"
-                            href="https://github.com/mateusjdev">
-                    </a>
-                </div>
-            </div>
-        </section>
-
     </div>
+
+    <!-- Montagem dinâmica do site-->
+    <script src="assets/js/dados.js"></script>
+    <script>
+        function adicionarCards() {
+            for (let i = 0; i < filmes.length; i++) {
+                let info = filmes[i];
+                document.getElementById("cards-filmes").innerHTML += `<div class="col">
+                    <div class="card h-100">
+                        <img src="assets/img/banner/${info.banner_wide}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">${info.nome}</h5>
+                            <p class="card-text">${info.sinopse_breve}</p>
+                        </div>
+                    </div>
+                </div>`
+            }
+        }
+
+        adicionarCards();
+    </script>
+
 </body>
 
 </html>

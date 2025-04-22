@@ -1,8 +1,8 @@
 {
     "filmes": [
         {
-            "banner": "banner_wide_0.webp",
-            "banner_wide": "banner_0.webp",
+            "banner": "banner_0.webp",
+            "banner_wide": "banner_wide_0.webp",
             "data_lancamento": "17/06/2005",
             "generos": "Ação, Crime, Drama",
             "id": "0",
@@ -12,8 +12,8 @@
             "sinopse_breve": "Batman, um justiceiro mascarado que usa força, inteligência e um arsenal tecnológico para combater o crime."
         },
         {
-            "banner": "banner_wide_1.webp",
-            "banner_wide": "banner_1.webp",
+            "banner": "banner_1.webp",
+            "banner_wide": "banner_wide_1.webp",
             "data_lancamento": "2014",
             "genero": "Comédia",
             "id": "1",
@@ -23,8 +23,8 @@
             "sinopse_breve": "Série de comedia ambientada no Vale do Silício."
         },
         {
-            "banner": "banner_wide_2.webp",
-            "banner_wide": "banner_2.webp",
+            "banner": "banner_2.webp",
+            "banner_wide": "banner_wide_2.webp",
             "data_lancamento": "2024",
             "genero": "Drama",
             "id": "2",
@@ -34,8 +34,8 @@
             "sinopse_breve": "A trajetória do tricampeão de Fórmula 1, Ayrton Senna."
         },
         {
-            "banner": "banner_wide_3.webp",
-            "banner_wide": "banner_3.webp",
+            "banner": "banner_3.webp",
+            "banner_wide": "banner_wide_3.webp",
             "data_lancamento": "2011",
             "genero": "Ficção Científica, Drama, Mistério",
             "id": "3",
@@ -45,8 +45,8 @@
             "sinopse_breve": "Histórias bizarras que revelam o pior da humanidade nas suas maiores invenções."
         },
         {
-            "banner": "banner_wide_4.webp",
-            "banner_wide": "banner_4.webp",
+            "banner": "banner_4.webp",
+            "banner_wide": "banner_wide_4.webp",
             "data_lancamento": "14/11/2019",
             "genero": "Drama, Ação, História ",
             "id": "4",
@@ -56,8 +56,8 @@
             "sinopse_breve": "A Ford busca a vitória em Le Mans, desafiando a Ferrari."
         },
         {
-            "banner": "banner_wide_5.webp",
-            "banner_wide": "banner_5.webp",
+            "banner": "banner_5.webp",
+            "banner_wide": "banner_wide_5.webp",
             "data_lancamento": "2019",
             "genero": "Animação, Ficção Científica",
             "id": "5",
@@ -67,8 +67,8 @@
             "sinopse_breve": "Curtas de animação em que cada episódio apresenta sua própria narrativa e estilo visual."
         },
         {
-            "banner": "banner_wide_6.webp",
-            "banner_wide": "banner_6.webp",
+            "banner": "banner_6.webp",
+            "banner_wide": "banner_wide_6.webp",
             "data_lancamento": "2019",
             "genero": "Ficção Científica, Ação e Aventura",
             "id": "6",
@@ -78,8 +78,8 @@
             "sinopse_breve": "Super-heróis abusam dos seus poderes ao invés de os usarem para o bem."
         },
         {
-            "banner": "banner_wide_7.webp",
-            "banner_wide": "banner_7.webp",
+            "banner": "banner_7.webp",
+            "banner_wide": "banner_wide_7.webp",
             "data_lancamento": "2021",
             "genero": "Animação, Ficção Científica, Ação e Aventura, Drama",
             "id": "7",
@@ -89,8 +89,8 @@
             "sinopse_breve": "Mark Grayson descobre que o legado de seu pai pode não ser tão heroico quanto parece."
         },
         {
-            "banner": "banner_wide_8.webp",
-            "banner_wide": "banner_8.webp",
+            "banner": "banner_8.jpg",
+            "banner_wide": "banner_wide_8.webp",
             "data_lancamento": "2023",
             "genero": "Drama",
             "id": "8",
@@ -100,19 +100,19 @@
             "sinopse_breve": "Em mundo pós-apocalíptico, um homem leva uma menina imune à infecção em jornada de sobrevivência."
         },
         {
-            "banner": "banner_wide_.webp",
-            "banner_wide": "banner_.webp",
+            "banner": "banner_9.jpg",
+            "banner_wide": "banner_wide_9.webp",
             "data_lancamento": "2022",
             "genero": "Drama, Mistério, Ficção Científica",
             "id": "9",
             "nome": "Ruptura",
             "nota_geral": 8.4,
-            "sinopse": "Viver para trabalhar.",
-            "sinopse_breve": "Mark lidera uma equipe de funcionários de escritório cujas memórias foram divididas cirurgicamente entre a vida no trabalho e a vida pessoal. Quando um colega de trabalho misterioso aparece fora do escritório, ele começa uma jornada para descobrir a verdade sobre seu trabalho."
+            "sinopse": "Mark lidera uma equipe de funcionários de escritório cujas memórias foram divididas cirurgicamente entre a vida no trabalho e a vida pessoal. Quando um colega de trabalho misterioso aparece fora do escritório, ele começa uma jornada para descobrir a verdade sobre seu trabalho.",
+            "sinopse_breve": "Funcionários têm memórias trabalho/vida separadas por procedimento radical."
         },
         {
-            "banner": "banner_wide_10.webp",
-            "banner_wide": "banner_10.webp",
+            "banner": "banner_10.jpg",
+            "banner_wide": "banner_wide_10.webp",
             "data_lancamento": "29/10/1999",
             "genero": "Drama",
             "id": "10",
@@ -122,8 +122,8 @@
             "sinopse_breve": "Um homem insatisfeito com a vida cria um clube de luta secreto com um amigo."
         },
         {
-            "banner": "banner_wide_11.webp",
-            "banner_wide": "banner_11.webp",
+            "banner": "banner_11.jpg",
+            "banner_wide": "banner_wide_11.jpg",
             "data_lancamento": "1999",
             "genero": "Animação, Comédia, Ficção Científica",
             "id": "11",

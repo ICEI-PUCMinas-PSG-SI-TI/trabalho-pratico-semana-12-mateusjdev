@@ -24,3 +24,7 @@
     width: 32px;
     height: 32px;
 }
+
+.avoid-large {
+    max-width: 120vh;
+}
