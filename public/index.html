@@ -1,11 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Metadata -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Absolute Cinema</title>
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="static/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS & JS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
 </head>
-<body>
-    
+
+<body data-bs-theme="dark">
+    <!-- Cabeçalho -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="trending.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Descobrir
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="trending/new.html">Novidades</a></li>
+                            <li><a class="dropdown-item" href="trending/popular.html">Populares</a></li>
+                            <li><a class="dropdown-item" href="trending/rated.html">Bem Avaliados</a></li>
+                            <li><a class="dropdown-item" href="trending/genres.html">Gêneros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="user/saved.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Salvos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="user/playlists.html">Minhas Listas</a></li>
+                            <li><a class="dropdown-item" href="user/favorites.html">Favoritos</a></li>
+                            <li><a class="dropdown-item" href="user/watchlater.html">Assistir mais tarde</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo -->
+    <div class="container-fluid m-0 g-0 p-4">
+        <!-- Carousel -->
+        <!-- TODO:
+            const carousel = new bootstrap.Carousel('#myCarousel')
+            -->
+        <div id="destaque" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a class="no-text-decoration" href="detalhes.html?id=1">
+                        <img src="static/banner/banner_wide_1.webp" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="black-text-white-background">Silicon Valley</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a class="no-text-decoration" href="detalhes.html?id=8">
+                    <img src="static/banner/banner_wide_8.webp" class="d-block w-100">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="black-text-white-background">The Last of Us</h5>
+                    </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a class="no-text-decoration" href="detalhes.html?id=9">
+                        <img src="static/banner/banner_wide_9.webp" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="black-text-white-background">Ruptura</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#destaque" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon black-text-white-background-button" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#destaque" data-bs-slide="next">
+                <span class="carousel-control-next-icon black-text-white-background-button" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div>
+
+    </div>
 </body>
+
 </html>
