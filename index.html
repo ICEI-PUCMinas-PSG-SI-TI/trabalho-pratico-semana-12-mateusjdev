@@ -91,32 +91,7 @@
 
             <section>
                 <div id="destaque" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a class="no-text-decoration" href="detalhes.html?id=1">
-                                <img src="assets/img/banner/banner_wide_1.webp" class="d-block w-100">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5 class="black-text-white-background">Silicon Valley</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a class="no-text-decoration" href="detalhes.html?id=8">
-                                <img src="assets/img/banner/banner_wide_8.webp" class="d-block w-100">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5 class="black-text-white-background">The Last of Us</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a class="no-text-decoration" href="detalhes.html?id=9">
-                                <img src="assets/img/banner/banner_wide_9.webp" class="d-block w-100">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5 class="black-text-white-background">Ruptura</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    <div id="carousel" class="carousel-inner"></div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#destaque" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon black-text-white-background-button"
                             aria-hidden="true"></span>
@@ -203,8 +178,61 @@
     <!-- Montagem dinâmica do site-->
     <script src="assets/js/dados.js"></script>
     <script>
+        let nfilmes = filmes.length;
+
+        function selecionarAleatorios(quantidade) {
+            let idFilmes = [];
+
+            for (i = 0; i < quantidade && i <= nfilmes;) {
+                num = Math.floor(Math.random() * (nfilmes + 1));
+
+                unico = true;
+
+                for (j = 0; j < idFilmes.length && unico; j++) {
+                    if (num === idFilmes[j]) {
+                        unico = false;
+                    }
+                }
+
+                if (unico) {
+                    idFilmes.push(num);
+                    i++;
+                }
+            }
+
+            return idFilmes;
+        }
+
+        function adicionarCarousel() {
+            // Seleciona filmes aleatorios
+            filmesAleatoriosId = selecionarAleatorios(5);
+
+            for (let i = 0; i < filmesAleatoriosId.length; i++) {
+                let info = filmes[filmesAleatoriosId[i]];
+                if (i === 0) {
+                    document.getElementById("carousel").innerHTML += `<div class="carousel-item active">
+                        <a class="no-text-decoration" href="detalhes.html?id=1">
+                            <img src="assets/img/banner/${info.banner_wide}" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="black-text-white-background">${info.nome}</h5>
+                            </div>
+                        </a>
+                    </div>`
+                } else {
+                    document.getElementById("carousel").innerHTML += `<div class="carousel-item">
+                        <a class="no-text-decoration" href="detalhes.html?id=8">
+                            <img src="assets/img/banner/${info.banner_wide}" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="black-text-white-background">${info.nome}</h5>
+                            </div>
+                        </a>
+                    </div>`
+                }
+            }
+        }
+
         function adicionarCards() {
-            for (let i = 0; i < filmes.length; i++) {
+            for (let i = 0; i < nfilmes; i++) {
                 let info = filmes[i];
                 document.getElementById("cards-filmes").innerHTML += `<div class="col">
                     <div class="card h-100">
@@ -218,6 +246,7 @@
             }
         }
 
+        adicionarCarousel();
         adicionarCards();
     </script>
 
