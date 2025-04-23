@@ -97,16 +97,19 @@
             <section>
                 <div id="destaque" class="carousel slide">
                     <div id="carousel" class="carousel-inner"></div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#destaque" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#destaque"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon black-text-white-background-button"
                             aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#destaque" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#destaque"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon black-text-white-background-button"
                             aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
+
                 </div>
             </section>
 
@@ -168,9 +171,8 @@
                         <h6><strong>Redes Sociais</strong></h6>
                         <hr>
                         <div class="d-flex flex-column">
-                            <a class="no-text-decoration">
-                                <img class="social-icon" src="assets/img/social/github.svg"
-                                    href="https://github.com/mateusjdev">
+                            <a class="no-text-decoration" href="https://github.com/mateusjdev">
+                                <img class="social-icon" src="assets/img/social/github.svg">
                             </a>
                         </div>
 
@@ -186,7 +188,7 @@
         let nfilmes = filmes.length;
 
         function selecionarAleatorios(quantidade) {
-            let idFilmes = [];
+            idFilmes = [];
 
             for (i = 0; i < quantidade && i <= nfilmes;) {
                 num = Math.floor(Math.random() * (nfilmes + 1));
@@ -208,51 +210,51 @@
             return idFilmes;
         }
 
-        function adicionarCarousel() {
+        function adicionarConteudo() {
             // Seleciona filmes aleatorios
             filmesAleatoriosId = selecionarAleatorios(5);
 
             for (let i = 0; i < filmesAleatoriosId.length; i++) {
-                let info = filmes[filmesAleatoriosId[i]];
+                id = filmesAleatoriosId[i];
+                infoCarousel = filmes[id];
                 if (i === 0) {
                     document.getElementById("carousel").innerHTML += `<div class="carousel-item active">
-                        <a class="no-text-decoration" href="detalhes.html?id=1">
-                            <img src="assets/img/banner/${info.banner_wide}" class="d-block w-100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="black-text-white-background">${info.nome}</h5>
+                        <a class="no-text-decoration" href="detalhes.html?id=${infoCarousel.id}">
+                            <img src="assets/img/banner/${infoCarousel.banner_wide}" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block black-text-white-background">
+                                <h5>${infoCarousel.nome}</h5>
+                                <p>${infoCarousel.sinopse_breve}</p>
                             </div>
                         </a>
                     </div>`
                 } else {
                     document.getElementById("carousel").innerHTML += `<div class="carousel-item">
-                        <a class="no-text-decoration" href="detalhes.html?id=8">
-                            <img src="assets/img/banner/${info.banner_wide}" class="d-block w-100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5 class="black-text-white-background">${info.nome}</h5>
+                        <a class="no-text-decoration" href="detalhes.html?id=${infoCarousel.id}">
+                            <img src="assets/img/banner/${infoCarousel.banner_wide}" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block black-text-white-background">
+                                <h5>${infoCarousel.nome}</h5>
+                                <p>${infoCarousel.sinopse_breve}</p>
                             </div>
                         </a>
                     </div>`
                 }
             }
-        }
 
-        function adicionarCards() {
             for (let i = 0; i < nfilmes; i++) {
-                let info = filmes[i];
+                let infoCards = filmes[i];
                 document.getElementById("cards-filmes").innerHTML += `<div class="col">
                     <div class="card h-100">
-                        <img src="assets/img/banner/${info.banner_wide}" class="card-img-top">
+                        <img src="assets/img/banner/${infoCards.banner_wide}" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title">${info.nome}</h5>
-                            <p class="card-text">${info.sinopse_breve}</p>
+                            <h5 class="card-title">${infoCards.nome}</h5>
+                            <p class="card-text">${infoCards.sinopse_breve}</p>
                         </div>
                     </div>
                 </div>`
             }
         }
-
-        adicionarCarousel();
-        adicionarCards();
+       
+        adicionarConteudo();
     </script>
 
 </body>
