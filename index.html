@@ -219,7 +219,7 @@
                 infoCarousel = filmes[id];
                 if (i === 0) {
                     document.getElementById("carousel").innerHTML += `<div class="carousel-item active">
-                        <a class="no-text-decoration" href="detalhes.html?id=${infoCarousel.id}">
+                        <a class="no-text-decoration" href="detalhe.html?id=${infoCarousel.id}">
                             <img src="assets/img/banner/${infoCarousel.banner_wide}" class="d-block w-100">
                             <div class="carousel-caption d-none d-md-block black-text-white-background">
                                 <h5>${infoCarousel.nome}</h5>
@@ -229,7 +229,7 @@
                     </div>`
                 } else {
                     document.getElementById("carousel").innerHTML += `<div class="carousel-item">
-                        <a class="no-text-decoration" href="detalhes.html?id=${infoCarousel.id}">
+                        <a class="no-text-decoration" href="detalhe.html?id=${infoCarousel.id}">
                             <img src="assets/img/banner/${infoCarousel.banner_wide}" class="d-block w-100">
                             <div class="carousel-caption d-none d-md-block black-text-white-background">
                                 <h5>${infoCarousel.nome}</h5>

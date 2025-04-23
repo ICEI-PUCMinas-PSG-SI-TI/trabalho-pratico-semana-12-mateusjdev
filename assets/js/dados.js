@@ -2,7 +2,7 @@ const filmes = [{
         "banner": "banner_0.webp",
         "banner_wide": "banner_wide_0.webp",
         "data_lancamento": "17/06/2005",
-        "generos": "Ação, Crime, Drama",
+        "genero": "Ação, Crime, Drama",
         "id": "0",
         "nome": "Batman Begins",
         "nota_geral": 7.7,

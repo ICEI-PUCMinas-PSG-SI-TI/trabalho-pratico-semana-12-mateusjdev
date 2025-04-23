@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <!-- TODO: Configurar dinamicamente -->
+    <title>Absolute Cinema</title>
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+    <!-- Bootstrap CSS & JS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+</head>
+
+<body data-bs-theme="dark">
+    <!-- Cabeçalho -->
+    <header class="body-section body-header">
+        <nav class="navbar navbar-expand-md bg-body-tertiary full-width">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img class="picture-logo" src="assets/img/icon.png">
+                </a>
+                <a class="navbar-brand logo-text" href="/">
+                    Absolute Cinema
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Descobrir
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Novidades</a></li>
+                                <li><a class="dropdown-item" href="#">Populares</a></li>
+                                <li><a class="dropdown-item" href="#">Bem Avaliados</a></li>
+                                <li><a class="dropdown-item" href="#">Gêneros</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Salvos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Minhas Listas</a></li>
+                                <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                                <li><a class="dropdown-item" href="#">Assistir mais tarde</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <div class="body-section body-content">
+        <!-- CONTEÚDO -->
+        <div id="info" class="container-fluid p-4 avoid-large">
+            <div class="row">
+                <div class="col-3 text-center">
+                    <img id="thumb" src="" class="img-fluid">
+                </div>
+                <div class="col-9 d-flex align-items-start flex-column justify-content-end">
+                    <h1 id="titulo" class="full-width">
+                        Título do filme do gênero de ação
+                    </h1>
+                    <div id="nota" class="full-width">
+                        ⭐ ⭐ ⭐ ⭐ ⭐
+                    </div>
+                    <div id="genero" class="full-width">
+                        Ação
+                    </div>
+                    <div id="data_lancamento" class="full-width">
+                        1 de janeiro de 1970
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row p-4">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <p id="sinopse">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui risus, viverra et libero id,
+                        porttitor blandit orci. Ut eu risus tempor, ultricies velit vel, rutrum ante. Pellentesque
+                        aliquet vulputate turpis quis pulvinar. Aliquam eu urna justo. Donec consequat justo vitae orci
+                        auctor dapibus. Nam ullamcorper dignissim tortor, id ultricies nunc facilisis sed. Aliquam a mi
+                        sed urna tempor posuere eu eu mi. Aliquam vel ultrices felis. Ut dapibus quam id mauris
+                        venenatis, non lacinia mauris posuere. Fusce molestie sodales imperdiet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/dados.js"></script>
+    <script>
+        let params = new URLSearchParams(location.search)
+        id = params.get("id")
+
+        let info = filmes.find(
+            function (elem) {
+                return elem.id == id;
+            }
+        );
+
+        if (info) {
+            document.getElementById('thumb').src = `assets/img/banner/${info.banner}`
+            document.getElementById('titulo').innerText = info.nome
+
+            let nota = document.getElementById('nota')
+            nota.innerText = ""
+            for (let i = 0; i < info.nota_geral; i++) {
+                nota.innerText += "⭐ "
+            }
+
+            document.getElementById('genero').innerText = info.genero;
+            document.getElementById('data_lancamento').innerText = info.data_lancamento;
+            document.getElementById('sinopse').innerText = info.sinopse;
+        } else {
+            document.getElementById('info').innerHTML = `<div class="row">
+                <div class="col d-flex justify-content-center align-items-start">
+                    <img id="thumb" src="assets/img/warning.svg" class="img-fluid">
+                </div>
+            </div>
+            <div class="row p-4">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <p>
+                        NÂO FOI POSSÍVEL IDENTIFICAR O FILME!
+                    </p>
+                </div>
+            </div>`
+        }
+    </script>
+</body>
+
+</html>

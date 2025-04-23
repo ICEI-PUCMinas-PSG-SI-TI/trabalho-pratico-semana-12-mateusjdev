@@ -9,7 +9,7 @@ sinopse_breve = "Batman, um justiceiro mascarado que usa força, inteligência e
 sinopse = "Marcado pelo assassinato de seus pais quando ainda era criança, o milionário Bruce Wayne decide viajar pelo mundo em busca de encontrar meios que lhe permitam combater a injustiça e provocar medo em seus adversários. Após retornar a Gotham City, sua cidade-natal, ele idealiza seu alter-ego: Batman, um justiceiro mascarado que usa força, inteligência e um arsenal tecnológico para combater o crime."
 banner = "banner_0.webp"
 banner_wide = "banner_wide_0.webp"
-generos = "Ação, Crime, Drama"
+genero = "Ação, Crime, Drama"
 nota_geral = 7.7
 
 [[filmes]]
