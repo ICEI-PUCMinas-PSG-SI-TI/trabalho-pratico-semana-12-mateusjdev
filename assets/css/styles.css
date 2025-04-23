@@ -20,6 +20,7 @@
     filter: invert();
 }
 
+.picture-logo,
 .social-icon {
     width: 32px;
     height: 32px;
@@ -27,4 +28,12 @@
 
 .avoid-large {
     max-width: 120vh;
+}
+
+.logo-text {
+    max-width: 70px;
+    font-size: medium !important;
+    text-wrap: auto !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
 }
