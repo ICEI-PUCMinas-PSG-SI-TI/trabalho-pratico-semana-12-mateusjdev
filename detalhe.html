@@ -214,16 +214,31 @@
             document.getElementById('data_lancamento').innerText = info.data_lancamento;
             document.getElementById('sinopse').innerText = info.sinopse;
         } else {
-            document.getElementById('info').innerHTML = `<div class="row">
-                <div class="col d-flex justify-content-center align-items-start">
-                    <img id="thumb" class="warning-icon" src="assets/img/icons/warning.svg" class="img-fluid">
+            document.getElementById('info').innerHTML = `<div class="card mb-3">
+                <div class="card-body">
+                    
+                    <div class="row">
+                        <div class="col d-flex justify-content-center align-items-start">
+                            <img id="thumb" class="warning-icon" src="assets/img/icons/warning.svg" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col d-flex flex-column justify-content-center align-items-center">
+                            <h5>
+                                NÂO FOI POSSÍVEL IDENTIFICAR O FILME!
+                            </h5>
+                            <p>
+                                Possívelmente os dados para esta id não foram encontrados! Verifique se a id informada esta correta!
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="row p-4">
+            
+            <div>
                 <div class="col d-flex justify-content-center align-items-center">
-                    <p>
-                        NÂO FOI POSSÍVEL IDENTIFICAR O FILME!
-                    </p>
+                    <a class="btn btn-primary" href="/" role="button">Voltar à página inicial</a>
                 </div>
             </div>`
         }
