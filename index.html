@@ -95,7 +95,7 @@
             <hr>
 
             <section>
-                <div id="destaque" class="carousel slide">
+                <div id="destaque" class="carousel slide" data-bs-ride="carousel">
                     <div id="carousel" class="carousel-inner"></div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#destaque" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon black-text-white-background-button"
@@ -169,7 +169,7 @@
                         <h6><strong>Redes Sociais</strong></h6>
                         <hr>
                         <div class="d-flex flex-column">
-                            <a class="no-text-decoration" href="https://github.com/mateusjdev">
+                            <a class="text-decoration-none" href="https://github.com/mateusjdev">
                                 <img class="social-icon" src="assets/img/social/github.svg">
                             </a>
                         </div>
@@ -224,7 +224,7 @@
                 }
 
                 document.getElementById("carousel").innerHTML += `<div class="${carouselClass}">
-                    <a class="no-text-decoration" href="detalhe.html?id=${infoFilme.id}">
+                    <a class="text-decoration-none" href="detalhe.html?id=${infoFilme.id}">
                         <img src="assets/img/banner/${infoFilme.banner_wide}" class="d-block w-100">
                         <div class="carousel-caption d-none d-md-block black-text-white-background">
                             <h5>${infoFilme.nome}</h5>
@@ -239,7 +239,7 @@
             for (let i = 0; i < nfilmes; i++) {
                 let infoFilme = filmes[i];
                 document.getElementById("cards-filmes").innerHTML += `<div class="col">
-                    <a class="card h-100 no-text-decoration" href="detalhe.html?id=${infoFilme.id}">
+                    <a class="card h-100 text-decoration-none" href="detalhe.html?id=${infoFilme.id}">
                         <img src="assets/img/banner/${infoFilme.banner_wide}" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">${infoFilme.nome}</h5>

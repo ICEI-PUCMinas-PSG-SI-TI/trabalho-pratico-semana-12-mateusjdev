@@ -1,8 +1,17 @@
+:root {
+    --carousel-text: rgb(255, 255, 255);
+}
+
 .black-text-white-background {
-    background: rgba(250, 243, 243, 0.8);
+    background: rgba(77, 77, 77, 0.7);
     border-radius: 10px;
     padding-top: 8px;
     padding-bottom: 8px;
+}
+
+.black-text-white-background h5,
+.black-text-white-background p {
+    color: var(--carousel-text);
 }
 
 .black-text-white-background-button {
@@ -12,11 +21,7 @@
     padding-bottom: 24px;
 }
 
-.no-text-decoration {
-    text-decoration: none;
-}
-
-[data-bs-theme="dark"] .social-icon  {
+[data-bs-theme="dark"] .social-icon {
     filter: invert();
 }
 
@@ -27,7 +32,10 @@
 }
 
 .avoid-large {
-    max-width: 120vh;
+    /* Configurado um tamanho máximo para a pagina inicial, porque alguns 
+        itens ficam muito grandes em monitores maiores.
+        */
+    max-width: 75em;
 }
 
 .logo-text {
