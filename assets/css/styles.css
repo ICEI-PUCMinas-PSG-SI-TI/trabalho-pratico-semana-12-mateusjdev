@@ -2,23 +2,27 @@
     --carousel-text: rgb(255, 255, 255);
 }
 
-.black-text-white-background {
-    background: rgba(77, 77, 77, 0.7);
-    border-radius: 10px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
 .black-text-white-background h5,
 .black-text-white-background p {
     color: var(--carousel-text);
 }
 
+.black-text-white-background,
 .black-text-white-background-button {
-    background: rgba(131, 131, 131, 0.5);
-    border-radius: 90px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    background: rgba(127, 127, 127, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.black-text-white-background {
+    border-radius: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.black-text-white-background-button {
+    border-radius: 45px;
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 
 .avoid-large {
@@ -29,17 +33,11 @@
 }
 
 .logo-text {
-    max-width: 70px;
-    font-size: medium !important;
-    text-wrap: auto !important;
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
+    max-width: 80px;
     font-family: "Comfortaa", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
 }
 
 .avoid-large-picture {

@@ -30,7 +30,7 @@
             <a class="navbar-brand" href="">
                 <img class="picture-logo" src="assets/img/icon.png">
             </a>
-            <a class="navbar-brand logo-text text-center text-md-start" href="">
+            <a class="navbar-brand logo-text text-center text-md-start py-0 mx-0 fs-6 text-wrap" href="/">
                 Absolute Cinema
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -212,9 +212,9 @@
                 document.getElementById("carousel").innerHTML += `<div class="${carouselClass}">
                     <a class="text-decoration-none" href="detalhe.html?id=${infoFilme.id}">
                         <img src="assets/img/banner/${infoFilme.banner_wide}" class="d-block w-100">
-                        <div class="carousel-caption d-none d-md-block black-text-white-background">
-                            <h5>${infoFilme.nome}</h5>
-                            <p>${infoFilme.sinopse_breve}</p>
+                        <div class="carousel-caption black-text-white-background p-1 p-md-3">
+                            <h5 class="m-0 p-0">${infoFilme.nome}</h5>
+                            <p class="d-none d-md-block mt-1 m-0 p-0">${infoFilme.sinopse_breve}</p>
                         </div>
                     </a>
                 </div>`
