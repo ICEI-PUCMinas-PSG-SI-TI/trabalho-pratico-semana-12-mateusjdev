@@ -113,7 +113,7 @@
             </div>
 
             <div class="row p-0 g-0 my-3">
-                <div class="card mb-3">
+                <div class="card">
                     <div class="card-body">
                         <p id="sinopse" class="m-2 p-0">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui risus, viverra et libero
@@ -128,6 +128,16 @@
                     </div>
                 </div>
             </div>
+
+            <div id="extraContentHeader" class="row card d-none mb-3 g-0">
+                <div class="card-body">
+                    <h5 class="m-0 y-0">
+                        <strong>Conteúdo Extras</strong>
+                    </h5>
+                </div>
+            </div>
+
+            <div id="extraContent" class="row d-none g-2"></div>
         </div>
     </div>
 
@@ -152,6 +162,35 @@
             nota.innerText = ""
             for (let i = 0; i < info.nota_geral; i++) {
                 nota.innerText += "⭐ "
+            }
+
+            // Se possui algum conteúdo, habilitar os extras
+            let extraContent = info.extra_content;
+
+            if (typeof (extraContent) !== "undefined" && extraContent) {
+                let extraContentLenght = extraContent.length;
+
+                document.getElementById('extraContentHeader').classList.remove("d-none");
+                document.getElementById('extraContent').classList.remove("d-none");
+
+                for (let i = 0; i < extraContentLenght; i++) {
+                    let extraContentI = extraContent[i];
+                    switch (extraContentI.type) {
+                        case 'youtube':
+                            document.getElementById('extraContent').innerHTML += `<div class="col-4">
+                                <div class="card p-1">
+                                    <div class="card-body m-0 p-0 g-0 w-100 d-flex justify-content-center flex-row">
+                                        <iframe class="w-100 extra-youtube"
+                                            src="https://www.youtube-nocookie.com/embed/${extraContentI.data}?controls=0"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>`;
+                            break;
+                    }
+                }
             }
 
             document.getElementById('genero').innerText = info.genero;

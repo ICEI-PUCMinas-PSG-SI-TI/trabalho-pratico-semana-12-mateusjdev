@@ -77,6 +77,10 @@ banner = "banner_6.webp"
 banner_wide= "banner_wide_6.webp"
 genero = "Ficção Científica, Ação e Aventura"
 nota_geral = 8.5
+extra_content = [
+    {id = 0, type = "youtube", data = "q5l-2R7E_48", description = "Trailer - 3º Temporada" },
+    {id = 1, type = "youtube", data = "m1lv458bxdg", description = "Trailer - 4º Temporada" }
+]
 
 [[filmes]]
 id = "7"

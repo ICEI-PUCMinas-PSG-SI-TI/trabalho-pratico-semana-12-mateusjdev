@@ -70,6 +70,20 @@
             "banner": "banner_6.webp",
             "banner_wide": "banner_wide_6.webp",
             "data_lancamento": "2019",
+            "extra_content": [
+                {
+                    "data": "q5l-2R7E_48",
+                    "description": "Trailer - 3º Temporada",
+                    "id": 0,
+                    "type": "youtube"
+                },
+                {
+                    "data": "m1lv458bxdg",
+                    "description": "Trailer - 4º Temporada",
+                    "id": 1,
+                    "type": "youtube"
+                }
+            ],
             "genero": "Ficção Científica, Ação e Aventura",
             "id": "6",
             "nome": "The Boys",

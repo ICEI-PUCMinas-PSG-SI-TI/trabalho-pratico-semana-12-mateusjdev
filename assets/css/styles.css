@@ -65,3 +65,8 @@
     backdrop-filter: blur(4px);
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.extra-youtube {
+    aspect-ratio: 16/9;
+    height: auto;
+}
