@@ -72,16 +72,40 @@
             "data_lancamento": "2019",
             "extra_content": [
                 {
+                    "data": "I0RC15nmjpU",
+                    "description": "Trailer - 1º Temporada",
+                    "id": 0,
+                    "type": "youtube"
+                },
+                {
+                    "data": "zt33bPZpT4M",
+                    "description": "Trailer - 2º Temporada",
+                    "id": 1,
+                    "type": "youtube"
+                },
+                {
                     "data": "q5l-2R7E_48",
                     "description": "Trailer - 3º Temporada",
-                    "id": 0,
+                    "id": 2,
                     "type": "youtube"
                 },
                 {
                     "data": "m1lv458bxdg",
                     "description": "Trailer - 4º Temporada",
-                    "id": 1,
+                    "id": 3,
                     "type": "youtube"
+                },
+                {
+                    "data": "banner/banner_5.jpg",
+                    "description": "Banner",
+                    "id": 4,
+                    "type": "img"
+                },
+                {
+                    "data": "banner/banner_wide_5.webp",
+                    "description": "Banner",
+                    "id": 5,
+                    "type": "img"
                 }
             ],
             "genero": "Ficção Científica, Ação e Aventura",

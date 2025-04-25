@@ -21,16 +21,6 @@
     padding-bottom: 24px;
 }
 
-[data-bs-theme="dark"] .social-icon {
-    filter: invert();
-}
-
-.picture-logo,
-.social-icon {
-    width: 32px;
-    height: 32px;
-}
-
 .avoid-large {
     /* Configurado um tamanho máximo para a pagina inicial, porque alguns 
         itens ficam muito grandes em monitores maiores.
@@ -69,4 +59,34 @@
 .extra-youtube {
     aspect-ratio: 16/9;
     height: auto;
+}
+
+.extra-img {
+    aspect-ratio: 16/9;
+    height: auto;
+    position: relative;
+}
+
+.download-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.picture-logo,
+.social-icon,
+.download-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.warning-icon {
+    width: 64px;
+    height: 64px;
+}
+
+[data-bs-theme="dark"] .download-icon,
+[data-bs-theme="dark"] .warning-icon,
+[data-bs-theme="dark"] .social-icon {
+    filter: invert();
 }
