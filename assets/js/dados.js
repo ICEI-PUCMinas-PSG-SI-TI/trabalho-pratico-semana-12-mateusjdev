@@ -2,6 +2,25 @@ const filmes = [{
         "banner": "banner_0.webp",
         "banner_wide": "banner_wide_0.webp",
         "data_lancamento": "17/06/2005",
+        "extra_content": [{
+                "data": "banner/banner_0.webp",
+                "description": "Banner",
+                "id": 0,
+                "type": "img"
+            },
+            {
+                "data": "banner/banner_wide_0.webp",
+                "description": "Banner",
+                "id": 1,
+                "type": "img"
+            },
+            {
+                "data": "qHhHIbNuok8",
+                "description": "Trailer",
+                "id": 2,
+                "type": "youtube"
+            }
+        ],
         "genero": "Ação, Crime, Drama",
         "id": "0",
         "nome": "Batman Begins",
@@ -13,6 +32,37 @@ const filmes = [{
         "banner": "banner_1.webp",
         "banner_wide": "banner_wide_1.webp",
         "data_lancamento": "2014",
+        "extra_content": [{
+                "data": "banner/banner_1.webp",
+                "description": "Banner",
+                "id": 0,
+                "type": "img"
+            },
+            {
+                "data": "banner/banner_wide_1.webp",
+                "description": "Banner",
+                "id": 1,
+                "type": "img"
+            },
+            {
+                "data": "lqgM8ZdAqKo",
+                "description": "Trailer",
+                "id": 2,
+                "type": "youtube"
+            },
+            {
+                "data": "dIKtblHdgnI",
+                "description": "Cut 1 - Scrum",
+                "id": 3,
+                "type": "youtube"
+            },
+            {
+                "data": "HcXu4_K1tMQ",
+                "description": "Cut 2 - Geladeira",
+                "id": 4,
+                "type": "youtube"
+            }
+        ],
         "genero": "Comédia",
         "id": "1",
         "nome": "Silicon Valley",
@@ -24,6 +74,25 @@ const filmes = [{
         "banner": "banner_2.webp",
         "banner_wide": "banner_wide_2.webp",
         "data_lancamento": "2024",
+        "extra_content": [{
+                "data": "banner/banner_2.webp",
+                "description": "Banner",
+                "id": 0,
+                "type": "img"
+            },
+            {
+                "data": "banner/banner_wide_2.webp",
+                "description": "Banner",
+                "id": 1,
+                "type": "img"
+            },
+            {
+                "data": "AGT5bUsOPLk",
+                "description": "Trailer",
+                "id": 2,
+                "type": "youtube"
+            }
+        ],
         "genero": "Drama",
         "id": "2",
         "nome": "Senna",
@@ -35,6 +104,25 @@ const filmes = [{
         "banner": "banner_3.webp",
         "banner_wide": "banner_wide_3.webp",
         "data_lancamento": "2011",
+        "extra_content": [{
+                "data": "banner/banner_3.webp",
+                "description": "Banner",
+                "id": 0,
+                "type": "img"
+            },
+            {
+                "data": "banner/banner_wide_3.webp",
+                "description": "Banner",
+                "id": 1,
+                "type": "img"
+            },
+            {
+                "data": "W210J2A49TA",
+                "description": "Trailer",
+                "id": 2,
+                "type": "youtube"
+            }
+        ],
         "genero": "Ficção Científica, Drama, Mistério",
         "id": "3",
         "nome": "Black Mirror",
@@ -46,6 +134,25 @@ const filmes = [{
         "banner": "banner_4.webp",
         "banner_wide": "banner_wide_4.webp",
         "data_lancamento": "14/11/2019",
+        "extra_content": [{
+                "data": "banner/banner_4.webp",
+                "description": "Banner",
+                "id": 0,
+                "type": "img"
+            },
+            {
+                "data": "banner/banner_wide_4.webp",
+                "description": "Banner",
+                "id": 1,
+                "type": "img"
+            },
+            {
+                "data": "5OF_8Df78_k",
+                "description": "Trailer",
+                "id": 2,
+                "type": "youtube"
+            }
+        ],
         "genero": "Drama, Ação, História ",
         "id": "4",
         "nome": "Ford vs Ferrari",
@@ -57,6 +164,25 @@ const filmes = [{
         "banner": "banner_5.jpg",
         "banner_wide": "banner_wide_5.webp",
         "data_lancamento": "2019",
+        "extra_content": [{
+                "data": "banner/banner_5.jpg",
+                "description": "Banner",
+                "id": 0,
+                "type": "img"
+            },
+            {
+                "data": "banner/banner_wide_5.webp",
+                "description": "Banner",
+                "id": 1,
+                "type": "img"
+            },
+            {
+                "data": "wUFwunMKa4E",
+                "description": "Trailer",
+                "id": 2,
+                "type": "youtube"
+            }
+        ],
         "genero": "Animação, Ficção Científica",
         "id": "5",
         "nome": "Love, Death & Robots",
@@ -93,13 +219,13 @@ const filmes = [{
                 "type": "youtube"
             },
             {
-                "data": "banner/banner_5.jpg",
+                "data": "banner/banner_6.webp",
                 "description": "Banner",
                 "id": 4,
                 "type": "img"
             },
             {
-                "data": "banner/banner_wide_5.webp",
+                "data": "banner/banner_wide_6.webp",
                 "description": "Banner",
                 "id": 5,
                 "type": "img"
@@ -116,6 +242,25 @@ const filmes = [{
         "banner": "banner_7.webp",
         "banner_wide": "banner_wide_7.webp",
         "data_lancamento": "2021",
+        "extra_content": [{
+                "data": "banner/banner_7.webp",
+                "description": "Banner",
+                "id": 0,
+                "type": "img"
+            },
+            {
+                "data": "banner/banner_wide_7.webp",
+                "description": "Banner",
+                "id": 1,
+                "type": "img"
+            },
+            {
+                "data": "chcPVeszoUo",
+                "description": "Trailer",
+                "id": 2,
+                "type": "youtube"
+            }
+        ],
         "genero": "Animação, Ficção Científica, Ação e Aventura, Drama",
         "id": "7",
         "nome": "Invencível",
@@ -127,6 +272,31 @@ const filmes = [{
         "banner": "banner_8.jpg",
         "banner_wide": "banner_wide_8.webp",
         "data_lancamento": "2023",
+        "extra_content": [{
+                "data": "banner/banner_8.jpg",
+                "description": "Banner",
+                "id": 0,
+                "type": "img"
+            },
+            {
+                "data": "banner/banner_wide_8.webp",
+                "description": "Banner",
+                "id": 1,
+                "type": "img"
+            },
+            {
+                "data": "lW5kiEUVlpo",
+                "description": "Trailer - 1º Temporada",
+                "id": 2,
+                "type": "youtube"
+            },
+            {
+                "data": "0vB2lHQim3Q",
+                "description": "Trailer - 2º Temporada",
+                "id": 3,
+                "type": "youtube"
+            }
+        ],
         "genero": "Drama",
         "id": "8",
         "nome": "The Last of Us",
@@ -138,6 +308,31 @@ const filmes = [{
         "banner": "banner_9.jpg",
         "banner_wide": "banner_wide_9.webp",
         "data_lancamento": "2022",
+        "extra_content": [{
+                "data": "banner/banner_9.jpg",
+                "description": "Banner",
+                "id": 0,
+                "type": "img"
+            },
+            {
+                "data": "banner/banner_wide_9.webp",
+                "description": "Banner",
+                "id": 1,
+                "type": "img"
+            },
+            {
+                "data": "EFjc_qHrnsQ",
+                "description": "Trailer - 1º Temporada",
+                "id": 2,
+                "type": "youtube"
+            },
+            {
+                "data": "-m_DPp0Ht0o",
+                "description": "Trailer - 2º Temporada",
+                "id": 3,
+                "type": "youtube"
+            }
+        ],
         "genero": "Drama, Mistério, Ficção Científica",
         "id": "9",
         "nome": "Ruptura",
@@ -149,6 +344,25 @@ const filmes = [{
         "banner": "banner_10.jpg",
         "banner_wide": "banner_wide_10.webp",
         "data_lancamento": "29/10/1999",
+        "extra_content": [{
+                "data": "banner/banner_10.jpg",
+                "description": "Banner",
+                "id": 0,
+                "type": "img"
+            },
+            {
+                "data": "banner/banner_wide_10.webp",
+                "description": "Banner",
+                "id": 1,
+                "type": "img"
+            },
+            {
+                "data": "BdJKm16Co6M",
+                "description": "Trailer",
+                "id": 2,
+                "type": "youtube"
+            }
+        ],
         "genero": "Drama",
         "id": "10",
         "nome": "Clube da Luta",
@@ -160,6 +374,31 @@ const filmes = [{
         "banner": "banner_11.jpg",
         "banner_wide": "banner_wide_11.jpg",
         "data_lancamento": "1999",
+        "extra_content": [{
+                "data": "banner/banner_11.jpg",
+                "description": "Banner",
+                "id": 0,
+                "type": "img"
+            },
+            {
+                "data": "banner/banner_wide_11.jpg",
+                "description": "Banner",
+                "id": 1,
+                "type": "img"
+            },
+            {
+                "data": "dUHzt5md1x0",
+                "description": "Trailer - 1º Temporada",
+                "id": 2,
+                "type": "youtube"
+            },
+            {
+                "data": "AM8lGTeUUk4",
+                "description": "Trailer - 11º Temporada",
+                "id": 3,
+                "type": "youtube"
+            }
+        ],
         "genero": "Animação, Comédia, Ficção Científica",
         "id": "11",
         "nome": "Futurama",

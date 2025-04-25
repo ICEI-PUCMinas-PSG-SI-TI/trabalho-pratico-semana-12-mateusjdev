@@ -11,6 +11,11 @@ banner = "banner_0.webp"
 banner_wide = "banner_wide_0.webp"
 genero = "Ação, Crime, Drama"
 nota_geral = 7.7
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_0.webp", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_0.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "qHhHIbNuok8", description = "Trailer" }
+]
 
 [[filmes]]
 id = "1"
@@ -22,6 +27,13 @@ banner = "banner_1.webp"
 banner_wide = "banner_wide_1.webp"
 genero = "Comédia"
 nota_geral = 8.2
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_1.webp", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_1.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "lqgM8ZdAqKo", description = "Trailer" },
+    {id = 3, type = "youtube", data = "dIKtblHdgnI", description = "Cut 1 - Scrum" },
+    {id = 4, type = "youtube", data = "HcXu4_K1tMQ", description = "Cut 2 - Geladeira" }
+]
 
 [[filmes]]
 id = "2"
@@ -33,6 +45,11 @@ banner = "banner_2.webp"
 banner_wide= "banner_wide_2.webp"
 genero = "Drama"
 nota_geral = 8.2
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_2.webp", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_2.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "AGT5bUsOPLk", description = "Trailer" }
+]
 
 [[filmes]]
 id = "3"
@@ -44,6 +61,11 @@ banner = "banner_3.webp"
 banner_wide= "banner_wide_3.webp"
 genero = "Ficção Científica, Drama, Mistério"
 nota_geral = 8.3
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_3.webp", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_3.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "W210J2A49TA", description = "Trailer" }
+]
 
 [[filmes]]
 id = "4"
@@ -55,6 +77,11 @@ banner = "banner_4.webp"
 banner_wide= "banner_wide_4.webp"
 genero = "Drama, Ação, História "
 nota_geral = 8.0
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_4.webp", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_4.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "5OF_8Df78_k", description = "Trailer" }
+]
 
 [[filmes]]
 id = "5"
@@ -66,6 +93,11 @@ banner = "banner_5.jpg"
 banner_wide= "banner_wide_5.webp"
 genero = "Animação, Ficção Científica"
 nota_geral = 8.0
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_5.jpg", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_5.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "wUFwunMKa4E", description = "Trailer" }
+]
 
 [[filmes]]
 id = "6"
@@ -82,8 +114,8 @@ extra_content = [
     {id = 1, type = "youtube", data = "zt33bPZpT4M", description = "Trailer - 2º Temporada" },
     {id = 2, type = "youtube", data = "q5l-2R7E_48", description = "Trailer - 3º Temporada" },
     {id = 3, type = "youtube", data = "m1lv458bxdg", description = "Trailer - 4º Temporada" },
-    {id = 4, type = "img", data = "banner/banner_5.jpg", description = "Banner" },
-    {id = 5, type = "img", data = "banner/banner_wide_5.webp", description = "Banner" }
+    {id = 4, type = "img", data = "banner/banner_6.webp", description = "Banner" },
+    {id = 5, type = "img", data = "banner/banner_wide_6.webp", description = "Banner" }
 ]
 
 [[filmes]]
@@ -96,6 +128,11 @@ banner = "banner_7.webp"
 banner_wide= "banner_wide_7.webp"
 genero = "Animação, Ficção Científica, Ação e Aventura, Drama"
 nota_geral = 8.6
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_7.webp", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_7.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "chcPVeszoUo", description = "Trailer" }
+]
 
 [[filmes]]
 id = "8"
@@ -107,6 +144,12 @@ banner = "banner_8.jpg"
 banner_wide= "banner_wide_8.webp"
 genero = "Drama"
 nota_geral = 8.6
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_8.jpg", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_8.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "lW5kiEUVlpo", description = "Trailer - 1º Temporada" },
+    {id = 3, type = "youtube", data = "0vB2lHQim3Q", description = "Trailer - 2º Temporada" }
+]
 
 [[filmes]]
 id = "9"
@@ -118,6 +161,12 @@ banner = "banner_9.jpg"
 banner_wide= "banner_wide_9.webp"
 genero = "Drama, Mistério, Ficção Científica"
 nota_geral = 8.4
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_9.jpg", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_9.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "EFjc_qHrnsQ", description = "Trailer - 1º Temporada" },
+    {id = 3, type = "youtube", data = "-m_DPp0Ht0o", description = "Trailer - 2º Temporada" }
+]
 
 [[filmes]]
 id = "10"
@@ -129,6 +178,12 @@ banner = "banner_10.jpg"
 banner_wide= "banner_wide_10.webp"
 genero = "Drama"
 nota_geral = 8.4
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_10.jpg", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_10.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "BdJKm16Co6M", description = "Trailer" }
+]
+
 
 [[filmes]]
 id = "11"
@@ -140,3 +195,9 @@ banner = "banner_11.jpg"
 banner_wide= "banner_wide_11.jpg"
 genero = "Animação, Comédia, Ficção Científica"
 nota_geral = 8.4
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_11.jpg", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_11.jpg", description = "Banner" },
+    {id = 2, type = "youtube", data = "dUHzt5md1x0", description = "Trailer - 1º Temporada" },
+    {id = 3, type = "youtube", data = "AM8lGTeUUk4", description = "Trailer - 11º Temporada" }
+]
