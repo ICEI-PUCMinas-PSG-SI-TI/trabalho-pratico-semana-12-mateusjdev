@@ -81,8 +81,8 @@
 
             <!-- Seção 1: Itens em Destaque -->
             <!-- TODO:
-        const carousel = new bootstrap.Carousel('#myCarousel')
-        -->
+            const carousel = new bootstrap.Carousel('#myCarousel')
+            -->
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item active" aria-current="page">
@@ -97,14 +97,12 @@
             <section>
                 <div id="destaque" class="carousel slide">
                     <div id="carousel" class="carousel-inner"></div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#destaque"
-                        data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#destaque" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon black-text-white-background-button"
                             aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#destaque"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#destaque" data-bs-slide="next">
                         <span class="carousel-control-next-icon black-text-white-background-button"
                             aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
@@ -182,18 +180,20 @@
         </div>
     </div>
 
-    <!-- Montagem dinâmica do site-->
+    <!-- JSON com os dados dos filmes -->
+    <!-- Pode ser acessado pelo objeto 'filmes' -->
     <script src="assets/js/dados.js"></script>
+    <!-- Montagem dinâmica do site -->
     <script>
         let nfilmes = filmes.length;
 
-        function selecionarAleatorios(quantidade) {
+        // Seleciona uma quantidade solicitada de ids do array de filmes aleatoriamente
+        function getRandomMoviesId(quantidade) {
             idFilmes = [];
 
-            for (i = 0; i < quantidade && i <= nfilmes;) {
-                num = Math.floor(Math.random() * (nfilmes + 1));
-
-                unico = true;
+            for (i = 0; i < quantidade && i < nfilmes;) {
+                let num = Math.floor(Math.random() * nfilmes);
+                let unico = true;
 
                 for (j = 0; j < idFilmes.length && unico; j++) {
                     if (num === idFilmes[j]) {
@@ -211,50 +211,45 @@
         }
 
         function adicionarConteudo() {
-            // Seleciona filmes aleatorios
-            filmesAleatoriosId = selecionarAleatorios(5);
+            let arrIdFilmesAleatorios = getRandomMoviesId(5);
 
-            for (let i = 0; i < filmesAleatoriosId.length; i++) {
-                id = filmesAleatoriosId[i];
-                infoCarousel = filmes[id];
+            // Adiciona cards ao menu de "Itens em destaque"
+            for (let i = 0; i < arrIdFilmesAleatorios.length; i++) {
+                let id = arrIdFilmesAleatorios[i];
+                let infoFilme = filmes[id];
+                let carouselClass = "carousel-item";
                 if (i === 0) {
-                    document.getElementById("carousel").innerHTML += `<div class="carousel-item active">
-                        <a class="no-text-decoration" href="detalhe.html?id=${infoCarousel.id}">
-                            <img src="assets/img/banner/${infoCarousel.banner_wide}" class="d-block w-100">
-                            <div class="carousel-caption d-none d-md-block black-text-white-background">
-                                <h5>${infoCarousel.nome}</h5>
-                                <p>${infoCarousel.sinopse_breve}</p>
-                            </div>
-                        </a>
-                    </div>`
-                } else {
-                    document.getElementById("carousel").innerHTML += `<div class="carousel-item">
-                        <a class="no-text-decoration" href="detalhe.html?id=${infoCarousel.id}">
-                            <img src="assets/img/banner/${infoCarousel.banner_wide}" class="d-block w-100">
-                            <div class="carousel-caption d-none d-md-block black-text-white-background">
-                                <h5>${infoCarousel.nome}</h5>
-                                <p>${infoCarousel.sinopse_breve}</p>
-                            </div>
-                        </a>
-                    </div>`
+                    // Configura o 1º card (index: 0) como ativo
+                    carouselClass += " active";
                 }
+
+                document.getElementById("carousel").innerHTML += `<div class="${carouselClass}">
+                    <a class="no-text-decoration" href="detalhe.html?id=${infoFilme.id}">
+                        <img src="assets/img/banner/${infoFilme.banner_wide}" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block black-text-white-background">
+                            <h5>${infoFilme.nome}</h5>
+                            <p>${infoFilme.sinopse_breve}</p>
+                        </div>
+                    </a>
+                </div>`
+
             }
 
+            // Adiciona cards ao menu de "Todos os itens"
             for (let i = 0; i < nfilmes; i++) {
-                let infoCards = filmes[i];
-                document.getElementById("cards-filmes").innerHTML += `
-                    <div class="col">
-                        <a class="card h-100 no-text-decoration" href="detalhe.html?id=${infoCards.id}">
-                            <img src="assets/img/banner/${infoCards.banner_wide}" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">${infoCards.nome}</h5>
-                                <p class="card-text">${infoCards.sinopse_breve}</p>
-                            </div>
-                        </a>
-                    </div>`
+                let infoFilme = filmes[i];
+                document.getElementById("cards-filmes").innerHTML += `<div class="col">
+                    <a class="card h-100 no-text-decoration" href="detalhe.html?id=${infoFilme.id}">
+                        <img src="assets/img/banner/${infoFilme.banner_wide}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">${infoFilme.nome}</h5>
+                            <p class="card-text">${infoFilme.sinopse_breve}</p>
+                        </div>
+                    </a>
+                </div>`
             }
         }
-       
+
         adicionarConteudo();
     </script>
 
