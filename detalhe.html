@@ -28,7 +28,7 @@
                 <a class="navbar-brand" href="/">
                     <img class="picture-logo" src="assets/img/icon.png">
                 </a>
-                <a class="navbar-brand logo-text" href="/">
+                <a class="navbar-brand logo-text text-center text-md-start" href="/">
                     Absolute Cinema
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -39,35 +39,35 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="trending.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Descobrir
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Novidades</a></li>
-                                <li><a class="dropdown-item" href="#">Populares</a></li>
-                                <li><a class="dropdown-item" href="#">Bem Avaliados</a></li>
-                                <li><a class="dropdown-item" href="#">Gêneros</a></li>
+                                <li><a class="dropdown-item" href="trending/new.html">Novidades</a></li>
+                                <li><a class="dropdown-item" href="trending/popular.html">Populares</a></li>
+                                <li><a class="dropdown-item" href="trending/rated.html">Bem Avaliados</a></li>
+                                <li><a class="dropdown-item" href="trending/genres.html">Gêneros</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="user/saved.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Salvos
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Minhas Listas</a></li>
-                                <li><a class="dropdown-item" href="#">Favoritos</a></li>
-                                <li><a class="dropdown-item" href="#">Assistir mais tarde</a></li>
+                                <li><a class="dropdown-item" href="user/playlists.html">Minhas Listas</a></li>
+                                <li><a class="dropdown-item" href="user/favorites.html">Favoritos</a></li>
+                                <li><a class="dropdown-item" href="user/watchlater.html">Assistir mais tarde</a></li>
                             </ul>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
                     </form>
                 </div>
             </div>
@@ -81,47 +81,51 @@
         <div id="info" class="container-fluid p-4 avoid-large">
 
             <!-- Seção 3 - Informações sobre o autor -->
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page">
-                        <h5>
-                            <strong>Informações gerais</strong>
-                        </h5>
-                    </li>
-                </ol>
-            </nav>
-            <hr>
-
-            <div class="row">
-                <div class="col-3 text-center">
-                    <img id="thumb" src="" class="img-fluid">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="m-0 y-0">
+                        <strong>Informações gerais</strong>
+                    </h5>
                 </div>
-                <div class="col-9 d-flex align-items-start flex-column justify-content-end">
-                    <h1 id="titulo" class="full-width">
-                        Título do filme do gênero de ação
-                    </h1>
-                    <div id="nota" class="full-width">
-                        ⭐ ⭐ ⭐ ⭐ ⭐
+            </div>
+
+            <div id="thumbBackground" class="row m-0 p-0 g-0 rounded-2 thumbBackground border">
+                <div id="thumbBackdrop" class="row m-0 p-0 g-0 rounded-2 thumbBackdrop">
+                    <div class="col-4 d-flex flex-column justify-content-center m-0 g-0 p-1 avoid-large-picture">
+                        <img id="thumb" class="img-fluid rounded-2">
                     </div>
-                    <div id="genero" class="full-width">
-                        Ação
-                    </div>
-                    <div id="data_lancamento" class="full-width">
-                        1 de janeiro de 1970
+                    <div id="infoSection"
+                        class="col-8 d-flex align-items-start flex-column justify-content-center m-0 p-3 g-0">
+                        <h1 id="titulo" class="full-width p-1">
+                            Título do filme do gênero de ação
+                        </h1>
+                        <div id="nota" class="full-width p-1">
+                            ⭐ ⭐ ⭐ ⭐ ⭐
+                        </div>
+                        <div id="genero" class="full-width p-1">
+                            Ação
+                        </div>
+                        <div id="data_lancamento" class="full-width p-1">
+                            1 de janeiro de 1970
+                        </div>
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class="row p-4">
-                <div class="col d-flex justify-content-center align-items-center">
-                    <p id="sinopse">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui risus, viverra et libero id,
-                        porttitor blandit orci. Ut eu risus tempor, ultricies velit vel, rutrum ante. Pellentesque
-                        aliquet vulputate turpis quis pulvinar. Aliquam eu urna justo. Donec consequat justo vitae orci
-                        auctor dapibus. Nam ullamcorper dignissim tortor, id ultricies nunc facilisis sed. Aliquam a mi
-                        sed urna tempor posuere eu eu mi. Aliquam vel ultrices felis. Ut dapibus quam id mauris
-                        venenatis, non lacinia mauris posuere. Fusce molestie sodales imperdiet.
-                    </p>
+
+            <div class="row p-0 g-0 my-3">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p id="sinopse" class="m-2 p-0">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui risus, viverra et libero
+                            id, porttitor blandit orci. Ut eu risus tempor, ultricies velit vel, rutrum ante.
+                            Pellentesque aliquet vulputate turpis quis pulvinar. Aliquam eu urna justo. Donec consequat
+                            justo vitae
+                            orci auctor dapibus. Nam ullamcorper dignissim tortor, id ultricies nunc facilisis sed.
+                            Aliquam a mi sed urna tempor posuere eu eu mi. Aliquam vel ultrices felis. Ut dapibus quam
+                            id mauris
+                            venenatis, non lacinia mauris posuere. Fusce molestie sodales imperdiet.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,13 +137,15 @@
         id = params.get("id")
 
         let info = filmes.find(
-            function (elem) {
+            (elem) => {
                 return elem.id == id;
             }
         );
 
         if (info) {
             document.getElementById('thumb').src = `assets/img/banner/${info.banner}`
+            document.getElementById('thumbBackground').style.backgroundImage =
+                `url(assets/img/banner/${info.banner_wide})`;
             document.getElementById('titulo').innerText = info.nome
 
             let nota = document.getElementById('nota')
