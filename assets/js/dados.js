@@ -54,7 +54,7 @@ const filmes = [{
         "sinopse_breve": "A Ford busca a vitória em Le Mans, desafiando a Ferrari."
     },
     {
-        "banner": "banner_5.webp",
+        "banner": "banner_5.jpg",
         "banner_wide": "banner_wide_5.webp",
         "data_lancamento": "2019",
         "genero": "Animação, Ficção Científica",
