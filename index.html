@@ -77,22 +77,19 @@
 
     <div class="d-flex w-100 justify-content-center">
         <!-- Conteúdo -->
-        <div class="avoid-large container-fluid m-0 g-0 p-4">
+        <div class="avoid-large container-fluid m-0 g-0 p-2">
 
             <!-- Seção 1: Itens em Destaque -->
             <!-- TODO:
             const carousel = new bootstrap.Carousel('#myCarousel')
             -->
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page">
-                        <h5>
-                            <strong>Itens em destaque</strong>
-                        </h5>
-                    </li>
-                </ol>
-            </nav>
-            <hr>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="m-0 y-0">
+                        <strong>Itens em destaque</strong>
+                    </h5>
+                </div>
+            </div>
 
             <section>
                 <div id="destaque" class="carousel slide" data-bs-ride="carousel">
@@ -111,21 +108,14 @@
                 </div>
             </section>
 
-            <!-- Espaço vazio -->
-            <div class="mt-4">
-            </div>
-
             <!-- Seção 2: Grupo de cards -->
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page">
-                        <h5>
-                            <strong>Todos os itens</strong>
-                        </h5>
-                    </li>
-                </ol>
-            </nav>
-            <hr>
+            <div class="card my-3">
+                <div class="card-body">
+                    <h5 class="m-0 y-0">
+                        <strong>Todos os itens</strong>
+                    </h5>
+                </div>
+            </div>
 
             <section>
                 <div id="cards-filmes" class="row row-cols-1 row-cols-md-2 g-4"></div>
@@ -137,16 +127,13 @@
             </div>
 
             <!-- Seção 3 - Informações sobre o autor -->
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page">
-                        <h5>
-                            <strong>Informações do Aluno</strong>
-                        </h5>
-                    </li>
-                </ol>
-            </nav>
-            <hr>
+            <div class="card my-3">
+                <div class="card-body">
+                    <h5 class="m-0 y-0">
+                        <strong>Informações do Aluno</strong>
+                    </h5>
+                </div>
+            </div>
 
             <section class="row">
                 <div class="col-sm-8">
