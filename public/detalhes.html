@@ -99,18 +99,18 @@
                     </div>
                     <div id="infoSection"
                         class="col-8 d-flex align-items-start flex-column justify-content-center m-0 p-3 g-0">
-                        <h1 id="titulo" class="w-100 p-1">
+                        <h1 id="titulo" class="overflow-wrap-break-word w-100 p-1">
                             Título do filme do gênero de ação
                         </h1>
-                        <div id="nota" class="w-100 p-1">
+                        <p id="nota" class="overflow-wrap-break-word w-100 p-1">
                             ⭐ ⭐ ⭐ ⭐ ⭐
-                        </div>
-                        <div id="genero" class="w-100 p-1">
+                        </p>
+                        <p id="genero" class="overflow-wrap-break-word w-100 p-1">
                             Ação
-                        </div>
-                        <div id="data_lancamento" class="w-100 p-1">
+                        </p>
+                        <p id="data_lancamento" class="overflow-wrap-break-word w-100 p-1">
                             1 de janeiro de 1970
-                        </div>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -162,10 +162,8 @@
                 document.getElementById('titulo').innerText = filme.nome
 
                 let nota = document.getElementById('nota')
-                nota.innerText = ""
-                for (let i = 0; i < filme.nota_geral; i++) {
-                    nota.innerText += "⭐ "
-                }
+                let nota_text = (" ⭐").repeat(filme.nota_geral)
+                nota.innerText = nota_text.trim()
 
                 // Se possui algum conteúdo, habilitar os extras
                 let extraContent = filme.extra_content;
