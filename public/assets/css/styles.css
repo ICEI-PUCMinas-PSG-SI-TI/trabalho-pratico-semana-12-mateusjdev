@@ -32,9 +32,22 @@
     max-width: 75em;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .logo-text {
     max-width: 80px;
-    font-family: "Comfortaa", serif;
+    font-family: "Comfortaa", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
