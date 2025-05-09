@@ -141,51 +141,51 @@
         </div>
     </div>
 
-    <script src="assets/js/dados.js"></script>
     <script>
         let params = new URLSearchParams(location.search)
-        id = params.get("id")
+        let id = params.get("id")
 
-        let info = filmes.find(
-            (elem) => {
-                return elem.id == id;
-            }
-        );
+        function adicionarDetalhes(filme) {
 
-        if (info) {
-            document.getElementById('thumb').src = `assets/img/banner/${info.banner}`
-            document.getElementById('thumbBackground').style.backgroundImage =
-                `url(assets/img/banner/${info.banner_wide})`;
-            document.getElementById('titulo').innerText = info.nome
+            // TODO: Informar que não foi possível identificar o filme
+            filme = filme[0]
+            if (!filme)
+                return
 
-            let nota = document.getElementById('nota')
-            nota.innerText = ""
-            for (let i = 0; i < info.nota_geral; i++) {
-                nota.innerText += "⭐ "
-            }
+            if (filme) {
+                document.getElementById('thumb').src = `assets/img/banner/${filme.banner}`
+                document.getElementById('thumbBackground').style.backgroundImage =
+                    `url(assets/img/banner/${filme.banner_wide})`;
+                document.getElementById('titulo').innerText = filme.nome
 
-            // Se possui algum conteúdo, habilitar os extras
-            let extraContent = info.extra_content;
-
-            if (typeof (extraContent) !== "undefined" && extraContent) {
-
-                // Função generica que cria a div onde o conteúdo vai ser inserido
-                function appendInnerLayout(innerLayout){
-                    return `<div class="col-12 col-sm-6 col-lg-4"><div class="card p-1">` +
-                        innerLayout + `</div></div>`;
+                let nota = document.getElementById('nota')
+                nota.innerText = ""
+                for (let i = 0; i < filme.nota_geral; i++) {
+                    nota.innerText += "⭐ "
                 }
 
-                let extraContentLenght = extraContent.length;
+                // Se possui algum conteúdo, habilitar os extras
+                let extraContent = filme.extra_content;
 
-                document.getElementById('extraContentHeader').classList.remove("d-none");
-                document.getElementById('extraContent').classList.remove("d-none");
+                if (typeof (extraContent) !== "undefined" && extraContent) {
 
-                for (let i = 0; i < extraContentLenght; i++) {
-                    let extraContentI = extraContent[i];
-                    switch (extraContentI.type) {
-                        case 'youtube':
-                            document.getElementById('extraContent').innerHTML += appendInnerLayout(
-                                `<div class="card-body m-0 p-0 g-0 w-100 d-flex justify-content-center flex-row">
+                    // Função generica que cria a div onde o conteúdo vai ser inserido
+                    function appendInnerLayout(innerLayout) {
+                        return `<div class="col-12 col-sm-6 col-lg-4"><div class="card p-1">` +
+                            innerLayout + `</div></div>`;
+                    }
+
+                    let extraContentLenght = extraContent.length;
+
+                    document.getElementById('extraContentHeader').classList.remove("d-none");
+                    document.getElementById('extraContent').classList.remove("d-none");
+
+                    for (let i = 0; i < extraContentLenght; i++) {
+                        let extraContentI = extraContent[i];
+                        switch (extraContentI.type) {
+                            case 'youtube':
+                                document.getElementById('extraContent').innerHTML += appendInnerLayout(
+                                    `<div class="card-body m-0 p-0 g-0 w-100 d-flex justify-content-center flex-row">
                                     <iframe class="w-100 extra-youtube"
                                         src="https://www.youtube-nocookie.com/embed/${extraContentI.data}?controls=0"
                                         title="YouTube video player" frameborder="0"
@@ -193,10 +193,10 @@
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>`
                                 );
-                            break;
-                        case 'img':
-                            document.getElementById('extraContent').innerHTML += appendInnerLayout(
-                                `<div class="card-body m-0 p-0 g-0 w-100 d-flex justify-content-center flex-row extra-img">
+                                break;
+                            case 'img':
+                                document.getElementById('extraContent').innerHTML += appendInnerLayout(
+                                    `<div class="card-body m-0 p-0 g-0 w-100 d-flex justify-content-center flex-row extra-img">
                                     <img class="img-fluid object-fit-contain" src="assets/img/${extraContentI.data}">
                                     <a class="btn btn-primary download-button" target="_blank"
                                         download="" href="assets/img/${extraContentI.data}"
@@ -205,16 +205,16 @@
                                     </a>
                                 </div>`
                                 );
-                            break;
+                                break;
+                        }
                     }
                 }
-            }
 
-            document.getElementById('genero').innerText = info.genero;
-            document.getElementById('data_lancamento').innerText = info.data_lancamento;
-            document.getElementById('sinopse').innerText = info.sinopse;
-        } else {
-            document.getElementById('info').innerHTML = `<div class="card mb-3">
+                document.getElementById('genero').innerText = filme.genero;
+                document.getElementById('data_lancamento').innerText = filme.data_lancamento;
+                document.getElementById('sinopse').innerText = filme.sinopse;
+            } else {
+                document.getElementById('info').innerHTML = `<div class="card mb-3">
                 <div class="card-body">
                     
                     <div class="row">
@@ -241,7 +241,17 @@
                     <a class="btn btn-primary" href="/" role="button">Voltar à página inicial</a>
                 </div>
             </div>`
+            }
         }
+
+        // TODO: Validar id anteriormente
+
+        // JSON com os dados dos filmes
+        // Pode ser acessado pelo objeto
+        var filmes = fetch(`http://localhost:3000/filmes?id=${id}`)
+            .then(res => res.json())
+            .then(data => adicionarDetalhes(data))
+            .catch(err => console.error('Erro:', err))
     </script>
 </body>
 

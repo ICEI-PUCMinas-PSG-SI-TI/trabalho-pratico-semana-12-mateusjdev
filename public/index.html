@@ -148,8 +148,8 @@
                     <h6><strong>Autoria</strong></h6>
                     <hr>
                     <p>Aluno: Mateus J. S. Santana</p>
-                        <p>Curso: Sistemas de Informação</p>
-                        <p>Turma: Manhâ</p>
+                    <p>Curso: Sistemas de Informação</p>
+                    <p>Turma: Manhâ</p>
                     <h6><strong>Redes Sociais</strong></h6>
                     <hr>
                     <div class="d-flex flex-row">
@@ -165,20 +165,14 @@
 
         </div>
     </div>
-
-    <!-- JSON com os dados dos filmes -->
-    <!-- Pode ser acessado pelo objeto 'filmes' -->
-    <script src="assets/js/dados.js"></script>
     <!-- Montagem dinâmica do site -->
     <script>
-        let nfilmes = filmes.length;
-
         // Seleciona uma quantidade solicitada de ids do array de filmes aleatoriamente
-        function getRandomMoviesId(quantidade) {
+        function getRandomMoviesId(filmes, quantidade) {
             idFilmes = [];
 
-            for (i = 0; i < quantidade && i < nfilmes;) {
-                let num = Math.floor(Math.random() * nfilmes);
+            for (i = 0; i < quantidade && i < filmes.length;) {
+                let num = Math.floor(Math.random() * filmes.length);
                 let unico = true;
 
                 for (j = 0; j < idFilmes.length && unico; j++) {
@@ -196,8 +190,8 @@
             return idFilmes;
         }
 
-        function adicionarConteudo() {
-            let arrIdFilmesAleatorios = getRandomMoviesId(5);
+        function adicionarConteudo(filmes) {
+            let arrIdFilmesAleatorios = getRandomMoviesId(filmes, 5);
 
             // Adiciona cards ao menu de "Itens em destaque"
             for (let i = 0; i < arrIdFilmesAleatorios.length; i++) {
@@ -222,7 +216,7 @@
             }
 
             // Adiciona cards ao menu de "Todos os itens"
-            for (let i = 0; i < nfilmes; i++) {
+            for (let i = 0; i < filmes.length; i++) {
                 let infoFilme = filmes[i];
                 document.getElementById("cards-filmes").innerHTML += `<div class="col">
                     <a class="card h-100 text-decoration-none" href="detalhe.html?id=${infoFilme.id}">
@@ -236,7 +230,12 @@
             }
         }
 
-        adicionarConteudo();
+        // JSON com os dados dos filmes
+        // Pode ser acessado pelo objeto
+        var filmes = fetch('http://localhost:3000/filmes')
+            .then(res => res.json())
+            .then(data => adicionarConteudo(data))
+            .catch(err => console.error('Erro:', err))
     </script>
 
 </body>
