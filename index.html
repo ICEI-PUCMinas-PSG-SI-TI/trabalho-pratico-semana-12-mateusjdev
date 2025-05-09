@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <title>Absolute Cinema</title>
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS & JS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+</head>
+
+<body data-bs-theme="dark">
+    <!-- Cabeçalho -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">
+                <img class="picture-logo" src="assets/img/icon.png">
+            </a>
+            <a class="navbar-brand logo-text text-center text-md-start py-0 mx-0 fs-6 text-wrap" href="/">
+                Absolute Cinema
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="trending.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Descobrir
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="trending/new.html">Novidades</a></li>
+                            <li><a class="dropdown-item" href="trending/popular.html">Populares</a></li>
+                            <li><a class="dropdown-item" href="trending/rated.html">Bem Avaliados</a></li>
+                            <li><a class="dropdown-item" href="trending/genres.html">Gêneros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="user/saved.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Salvos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="user/playlists.html">Minhas Listas</a></li>
+                            <li><a class="dropdown-item" href="user/favorites.html">Favoritos</a></li>
+                            <li><a class="dropdown-item" href="user/watchlater.html">Assistir mais tarde</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex w-100 justify-content-center">
+        <!-- Conteúdo -->
+        <div class="avoid-large container-fluid m-0 g-0 p-2">
+
+            <!-- Seção 1: Itens em Destaque -->
+            <!-- TODO:
+            const carousel = new bootstrap.Carousel('#myCarousel')
+            -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="m-0 y-0">
+                        <strong>Itens em destaque</strong>
+                    </h5>
+                </div>
+            </div>
+
+            <section>
+                <div id="destaque" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carousel" class="carousel-inner"></div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#destaque" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon black-text-white-background-button"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#destaque" data-bs-slide="next">
+                        <span class="carousel-control-next-icon black-text-white-background-button"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+            </section>
+
+            <!-- Seção 2: Grupo de cards -->
+            <div class="card my-3">
+                <div class="card-body">
+                    <h5 class="m-0 y-0">
+                        <strong>Todos os itens</strong>
+                    </h5>
+                </div>
+            </div>
+
+            <section>
+                <div id="cards-filmes" class="row row-cols-1 row-cols-md-2 g-4"></div>
+
+            </section>
+
+            <!-- Espaço vazio -->
+            <div class="mt-4">
+            </div>
+
+            <!-- Seção 3 - Informações sobre o autor -->
+            <div class="card my-3">
+                <div class="card-body">
+                    <h5 class="m-0 y-0">
+                        <strong>Informações do Aluno</strong>
+                    </h5>
+                </div>
+            </div>
+
+            <section class="row p-1">
+                <div class="col-md-8">
+                    <h6><strong>Sobre</strong></h6>
+                    <hr>
+                    <p>Sempre interessado na área da computação e independente da linguagem, busco sempre estar em
+                        constante
+                        aprendizado.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h6><strong>Autoria</strong></h6>
+                    <hr>
+                    <p>Aluno: Mateus J. S. Santana</p>
+                        <p>Curso: Sistemas de Informação</p>
+                        <p>Turma: Manhâ</p>
+                    <h6><strong>Redes Sociais</strong></h6>
+                    <hr>
+                    <div class="d-flex flex-row">
+                        <a class="text-decoration-none" href="https://github.com/mateusjdev">
+                            <img class="social-icon me-3" src="assets/img/social/github.svg">
+                        </a>
+                        <a class="text-decoration-none" href="https://gitlab.com/mateusjdev">
+                            <img class="social-icon me-3" src="assets/img/social/gitlab.svg">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- JSON com os dados dos filmes -->
+    <!-- Pode ser acessado pelo objeto 'filmes' -->
+    <script src="assets/js/dados.js"></script>
+    <!-- Montagem dinâmica do site -->
+    <script>
+        let nfilmes = filmes.length;
+
+        // Seleciona uma quantidade solicitada de ids do array de filmes aleatoriamente
+        function getRandomMoviesId(quantidade) {
+            idFilmes = [];
+
+            for (i = 0; i < quantidade && i < nfilmes;) {
+                let num = Math.floor(Math.random() * nfilmes);
+                let unico = true;
+
+                for (j = 0; j < idFilmes.length && unico; j++) {
+                    if (num === idFilmes[j]) {
+                        unico = false;
+                    }
+                }
+
+                if (unico) {
+                    idFilmes.push(num);
+                    i++;
+                }
+            }
+
+            return idFilmes;
+        }
+
+        function adicionarConteudo() {
+            let arrIdFilmesAleatorios = getRandomMoviesId(5);
+
+            // Adiciona cards ao menu de "Itens em destaque"
+            for (let i = 0; i < arrIdFilmesAleatorios.length; i++) {
+                let id = arrIdFilmesAleatorios[i];
+                let infoFilme = filmes[id];
+                let carouselClass = "carousel-item";
+                if (i === 0) {
+                    // Configura o 1º card (index: 0) como ativo
+                    carouselClass += " active";
+                }
+
+                document.getElementById("carousel").innerHTML += `<div class="${carouselClass}">
+                    <a class="text-decoration-none" href="detalhe.html?id=${infoFilme.id}">
+                        <img src="assets/img/banner/${infoFilme.banner_wide}" class="d-block w-100">
+                        <div class="carousel-caption black-text-white-background p-1 p-md-3">
+                            <h5 class="m-0 p-0">${infoFilme.nome}</h5>
+                            <p class="d-none d-md-block mt-1 m-0 p-0">${infoFilme.sinopse_breve}</p>
+                        </div>
+                    </a>
+                </div>`
+
+            }
+
+            // Adiciona cards ao menu de "Todos os itens"
+            for (let i = 0; i < nfilmes; i++) {
+                let infoFilme = filmes[i];
+                document.getElementById("cards-filmes").innerHTML += `<div class="col">
+                    <a class="card h-100 text-decoration-none" href="detalhe.html?id=${infoFilme.id}">
+                        <img src="assets/img/banner/${infoFilme.banner_wide}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">${infoFilme.nome}</h5>
+                            <p class="card-text">${infoFilme.sinopse_breve}</p>
+                        </div>
+                    </a>
+                </div>`
+            }
+        }
+
+        adicionarConteudo();
+    </script>
+
+</body>
+
+</html>

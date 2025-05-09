@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <!-- TODO: Configurar dinamicamente -->
+    <title>Absolute Cinema</title>
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+    <!-- Bootstrap CSS & JS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+</head>
+
+<body data-bs-theme="dark">
+    <!-- Cabeçalho -->
+    <header class="body-section body-header">
+        <nav class="navbar navbar-expand-md bg-body-tertiary full-width">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img class="picture-logo" src="assets/img/icon.png">
+                </a>
+                <a class="navbar-brand logo-text text-center text-md-start py-0 mx-0 fs-6 text-wrap" href="/">
+                    Absolute Cinema
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="trending.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Descobrir
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="trending/new.html">Novidades</a></li>
+                                <li><a class="dropdown-item" href="trending/popular.html">Populares</a></li>
+                                <li><a class="dropdown-item" href="trending/rated.html">Bem Avaliados</a></li>
+                                <li><a class="dropdown-item" href="trending/genres.html">Gêneros</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="user/saved.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Salvos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="user/playlists.html">Minhas Listas</a></li>
+                                <li><a class="dropdown-item" href="user/favorites.html">Favoritos</a></li>
+                                <li><a class="dropdown-item" href="user/watchlater.html">Assistir mais tarde</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <div class="body-section body-content">
+
+        <!-- CONTEÚDO -->
+        <div id="info" class="container-fluid p-4 avoid-large">
+
+            <!-- Seção 3 - Informações sobre o autor -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="m-0 y-0">
+                        <strong>Informações gerais</strong>
+                    </h5>
+                </div>
+            </div>
+
+            <div id="thumbBackground" class="row m-0 p-0 g-0 rounded-2 thumbBackground border">
+                <div id="thumbBackdrop" class="row m-0 p-0 g-0 rounded-2 thumbBackdrop">
+                    <div class="col-4 d-flex flex-column justify-content-center m-0 g-0 p-1 avoid-large-picture">
+                        <img id="thumb" class="img-fluid rounded-2">
+                    </div>
+                    <div id="infoSection"
+                        class="col-8 d-flex align-items-start flex-column justify-content-center m-0 p-3 g-0">
+                        <h1 id="titulo" class="full-width p-1">
+                            Título do filme do gênero de ação
+                        </h1>
+                        <div id="nota" class="full-width p-1">
+                            ⭐ ⭐ ⭐ ⭐ ⭐
+                        </div>
+                        <div id="genero" class="full-width p-1">
+                            Ação
+                        </div>
+                        <div id="data_lancamento" class="full-width p-1">
+                            1 de janeiro de 1970
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-0 g-0 my-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p id="sinopse" class="m-2 p-0">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui risus, viverra et libero
+                            id, porttitor blandit orci. Ut eu risus tempor, ultricies velit vel, rutrum ante.
+                            Pellentesque aliquet vulputate turpis quis pulvinar. Aliquam eu urna justo. Donec consequat
+                            justo vitae
+                            orci auctor dapibus. Nam ullamcorper dignissim tortor, id ultricies nunc facilisis sed.
+                            Aliquam a mi sed urna tempor posuere eu eu mi. Aliquam vel ultrices felis. Ut dapibus quam
+                            id mauris
+                            venenatis, non lacinia mauris posuere. Fusce molestie sodales imperdiet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="extraContentHeader" class="row card d-none mb-3 g-0">
+                <div class="card-body">
+                    <h5 class="m-0 y-0">
+                        <strong>Conteúdos Extras</strong>
+                    </h5>
+                </div>
+            </div>
+
+            <div id="extraContent" class="row d-none g-2"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/dados.js"></script>
+    <script>
+        let params = new URLSearchParams(location.search)
+        id = params.get("id")
+
+        let info = filmes.find(
+            (elem) => {
+                return elem.id == id;
+            }
+        );
+
+        if (info) {
+            document.getElementById('thumb').src = `assets/img/banner/${info.banner}`
+            document.getElementById('thumbBackground').style.backgroundImage =
+                `url(assets/img/banner/${info.banner_wide})`;
+            document.getElementById('titulo').innerText = info.nome
+
+            let nota = document.getElementById('nota')
+            nota.innerText = ""
+            for (let i = 0; i < info.nota_geral; i++) {
+                nota.innerText += "⭐ "
+            }
+
+            // Se possui algum conteúdo, habilitar os extras
+            let extraContent = info.extra_content;
+
+            if (typeof (extraContent) !== "undefined" && extraContent) {
+
+                // Função generica que cria a div onde o conteúdo vai ser inserido
+                function appendInnerLayout(innerLayout){
+                    return `<div class="col-12 col-sm-6 col-lg-4"><div class="card p-1">` +
+                        innerLayout + `</div></div>`;
+                }
+
+                let extraContentLenght = extraContent.length;
+
+                document.getElementById('extraContentHeader').classList.remove("d-none");
+                document.getElementById('extraContent').classList.remove("d-none");
+
+                for (let i = 0; i < extraContentLenght; i++) {
+                    let extraContentI = extraContent[i];
+                    switch (extraContentI.type) {
+                        case 'youtube':
+                            document.getElementById('extraContent').innerHTML += appendInnerLayout(
+                                `<div class="card-body m-0 p-0 g-0 w-100 d-flex justify-content-center flex-row">
+                                    <iframe class="w-100 extra-youtube"
+                                        src="https://www.youtube-nocookie.com/embed/${extraContentI.data}?controls=0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>`
+                                );
+                            break;
+                        case 'img':
+                            document.getElementById('extraContent').innerHTML += appendInnerLayout(
+                                `<div class="card-body m-0 p-0 g-0 w-100 d-flex justify-content-center flex-row extra-img">
+                                    <img class="img-fluid object-fit-contain" src="assets/img/${extraContentI.data}">
+                                    <a class="btn btn-primary download-button" target="_blank"
+                                        download="" href="assets/img/${extraContentI.data}"
+                                        role="button">
+                                        <img class="download-icon" src="assets/img/icons/download.svg">
+                                    </a>
+                                </div>`
+                                );
+                            break;
+                    }
+                }
+            }
+
+            document.getElementById('genero').innerText = info.genero;
+            document.getElementById('data_lancamento').innerText = info.data_lancamento;
+            document.getElementById('sinopse').innerText = info.sinopse;
+        } else {
+            document.getElementById('info').innerHTML = `<div class="card mb-3">
+                <div class="card-body">
+                    
+                    <div class="row">
+                        <div class="col d-flex justify-content-center align-items-start">
+                            <img id="thumb" class="warning-icon" src="assets/img/icons/warning.svg" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col d-flex flex-column justify-content-center align-items-center">
+                            <h5>
+                                NÂO FOI POSSÍVEL IDENTIFICAR O FILME!
+                            </h5>
+                            <p>
+                                Possívelmente os dados para esta id não foram encontrados! Verifique se a id informada esta correta!
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <a class="btn btn-primary" href="/" role="button">Voltar à página inicial</a>
+                </div>
+            </div>`
+        }
+    </script>
+</body>
+
+</html>
