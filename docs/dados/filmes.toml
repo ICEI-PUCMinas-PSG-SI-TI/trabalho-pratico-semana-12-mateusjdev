@@ -1,0 +1,203 @@
+# Informações retiradas do site https://www.themoviedb.org em 22/04/2025.
+# .json gerado em 22/04/2025
+
+[[filmes]]
+id = 1
+nome = "Batman Begins"
+data_lancamento = "17/06/2005"
+sinopse_breve = "Batman, um justiceiro mascarado que usa força, inteligência e um arsenal tecnológico para combater o crime."
+sinopse = "Marcado pelo assassinato de seus pais quando ainda era criança, o milionário Bruce Wayne decide viajar pelo mundo em busca de encontrar meios que lhe permitam combater a injustiça e provocar medo em seus adversários. Após retornar a Gotham City, sua cidade-natal, ele idealiza seu alter-ego: Batman, um justiceiro mascarado que usa força, inteligência e um arsenal tecnológico para combater o crime."
+banner = "banner_0.webp"
+banner_wide = "banner_wide_0.webp"
+genero = "Ação, Crime, Drama"
+nota_geral = 7.7
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_0.webp", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_0.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "qHhHIbNuok8", description = "Trailer" }
+]
+
+[[filmes]]
+id = 2
+nome = "Silicon Valley"
+data_lancamento = "2014"
+sinopse_breve = "Série de comedia ambientada no Vale do Silício."
+sinopse = "Ambientada no Vale do Silício, região da Califórnia fértil em inovações tecnológicas e científicas, a série mostra um grupo de desenvolvedores que cria novo um programa com o objetivo de impressionar um bilionário excêntrico do ramo tecnológico."
+banner = "banner_1.webp"
+banner_wide = "banner_wide_1.webp"
+genero = "Comédia"
+nota_geral = 8.2
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_1.webp", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_1.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "lqgM8ZdAqKo", description = "Trailer" },
+    {id = 3, type = "youtube", data = "dIKtblHdgnI", description = "Cut 1 - Scrum" },
+    {id = 4, type = "youtube", data = "HcXu4_K1tMQ", description = "Cut 2 - Geladeira" }
+]
+
+[[filmes]]
+id = 3
+nome = "Senna"
+data_lancamento = "2024"
+sinopse_breve = "A trajetória do tricampeão de Fórmula 1, Ayrton Senna."
+sinopse = "A trajetória de superação, desencontros, alegrias e tristezas do tricampeão de Fórmula 1, Ayrton Senna, desbravando sua personalidade e suas relações pessoais. O ponto de partida será o começo da carreira automobilística do Ayrton, quando ele se muda para a Inglaterra para competir na Fórmula Ford, até o trágico acidente em Ímola, na Itália, durante o Grande Prêmio de San Marino."
+banner = "banner_2.webp"
+banner_wide= "banner_wide_2.webp"
+genero = "Drama"
+nota_geral = 8.2
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_2.webp", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_2.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "AGT5bUsOPLk", description = "Trailer" }
+]
+
+[[filmes]]
+id = 4
+nome = "Black Mirror"
+data_lancamento = "2011"
+sinopse_breve = "Histórias bizarras que revelam o pior da humanidade nas suas maiores invenções."
+sinopse = "As histórias bizarras não têm limite nesta série antológica que revela o pior da humanidade, suas maiores invenções e muito mais."
+banner = "banner_3.webp"
+banner_wide= "banner_wide_3.webp"
+genero = "Ficção Científica, Drama, Mistério"
+nota_geral = 8.3
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_3.webp", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_3.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "W210J2A49TA", description = "Trailer" }
+]
+
+[[filmes]]
+id = 5
+nome = "Ford vs Ferrari"
+data_lancamento = "14/11/2019"
+sinopse = "O designer de carros americano Carroll Shelby e o destemido piloto britânico Ken Miles juntos combatem a interferência corporativa e as leis da física para construir um carro de corrida revolucionário e enfrentar Enzo Ferrari nas 24 horas de Le Mans na França em 1966."
+sinopse_breve = "A Ford busca a vitória em Le Mans, desafiando a Ferrari."
+banner = "banner_4.webp"
+banner_wide= "banner_wide_4.webp"
+genero = "Drama, Ação, História "
+nota_geral = 8.0
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_4.webp", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_4.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "5OF_8Df78_k", description = "Trailer" }
+]
+
+[[filmes]]
+id = 6
+nome = "Love, Death & Robots"
+data_lancamento = "2019"
+sinopse = "Criaturas aterrorizantes, surpresas bizarras e humor ácido habitam e florescem de cada um dos vários universos únicos criados para essa coletânea de curtas de animação, em que cada episódio apresenta sua própria narrativa e estilo visual."
+sinopse_breve = "Curtas de animação em que cada episódio apresenta sua própria narrativa e estilo visual."
+banner = "banner_5.jpg"
+banner_wide= "banner_wide_5.webp"
+genero = "Animação, Ficção Científica"
+nota_geral = 8.0
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_5.jpg", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_5.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "wUFwunMKa4E", description = "Trailer" }
+]
+
+[[filmes]]
+id = 7
+nome = "The Boys"
+data_lancamento = "2019"
+sinopse = "Na trama, conhecemos um mundo em que super-heróis são as maiores celebridades do planeta, e rotineiramente abusam dos seus poderes ao invés de os usarem para o bem."
+sinopse_breve = "Super-heróis abusam dos seus poderes ao invés de os usarem para o bem."
+banner = "banner_6.webp"
+banner_wide= "banner_wide_6.webp"
+genero = "Ficção Científica, Ação e Aventura"
+nota_geral = 8.5
+extra_content = [
+    {id = 0, type = "youtube", data = "I0RC15nmjpU", description = "Trailer - 1º Temporada" },
+    {id = 1, type = "youtube", data = "zt33bPZpT4M", description = "Trailer - 2º Temporada" },
+    {id = 2, type = "youtube", data = "q5l-2R7E_48", description = "Trailer - 3º Temporada" },
+    {id = 3, type = "youtube", data = "m1lv458bxdg", description = "Trailer - 4º Temporada" },
+    {id = 4, type = "img", data = "banner/banner_6.webp", description = "Banner" },
+    {id = 5, type = "img", data = "banner/banner_wide_6.webp", description = "Banner" }
+]
+
+[[filmes]]
+id = 8
+nome = "Invencível"
+data_lancamento = "2021"
+sinopse = "Uma animação de super-heróis para adultos e conta a história de Mark Grayson, de 17 anos, um cara como qualquer outro de sua idade, exceto que seu pai é o super-herói mais poderoso do planeta, Omni-Man. Porém, à medida que Mark desenvolve seus próprios poderes, ele descobre que o legado de seu pai pode não ser tão heroico quanto parece."
+sinopse_breve = "Mark Grayson descobre que o legado de seu pai pode não ser tão heroico quanto parece."
+banner = "banner_7.webp"
+banner_wide= "banner_wide_7.webp"
+genero = "Animação, Ficção Científica, Ação e Aventura, Drama"
+nota_geral = 8.6
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_7.webp", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_7.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "chcPVeszoUo", description = "Trailer" }
+]
+
+[[filmes]]
+id = 9
+nome = "The Last of Us"
+data_lancamento = "2023"
+sinopse = "Situado duas décadas após a implosão de nossa sociedade, o drama seguirá Joel, um sobrevivente difícil, que é contratado para contrabandear uma garota de 14 anos chamada Ellie para fora de uma zona de quarentena opressiva. O que começa como um pequeno trabalho logo se torna uma jornada brutal e de partir o coração, já que os dois precisam atravessar os Estados Unidos e dependem um do outro para sobreviver."
+sinopse_breve = "Em mundo pós-apocalíptico, um homem leva uma menina imune à infecção em jornada de sobrevivência."
+banner = "banner_8.jpg"
+banner_wide= "banner_wide_8.webp"
+genero = "Drama"
+nota_geral = 8.6
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_8.jpg", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_8.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "lW5kiEUVlpo", description = "Trailer - 1º Temporada" },
+    {id = 3, type = "youtube", data = "0vB2lHQim3Q", description = "Trailer - 2º Temporada" }
+]
+
+[[filmes]]
+id = 10
+nome = "Ruptura"
+data_lancamento = "2022"
+sinopse = "Mark lidera uma equipe de funcionários de escritório cujas memórias foram divididas cirurgicamente entre a vida no trabalho e a vida pessoal. Quando um colega de trabalho misterioso aparece fora do escritório, ele começa uma jornada para descobrir a verdade sobre seu trabalho."
+sinopse_breve = "Funcionários têm memórias trabalho/vida separadas por procedimento radical."
+banner = "banner_9.jpg"
+banner_wide= "banner_wide_9.webp"
+genero = "Drama, Mistério, Ficção Científica"
+nota_geral = 8.4
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_9.jpg", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_9.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "EFjc_qHrnsQ", description = "Trailer - 1º Temporada" },
+    {id = 3, type = "youtube", data = "-m_DPp0Ht0o", description = "Trailer - 2º Temporada" }
+]
+
+[[filmes]]
+id = 11
+nome = "Clube da Luta"
+data_lancamento = "29/10/1999"
+sinopse = "Um homem deprimido que sofre de insônia conhece um estranho vendedor de sabonetes chamado Tyler Durden. Eles formam um clube clandestino com regras rígidas onde lutam com outros homens cansados de suas vidas mundanas. Mas sua parceria perfeita é comprometida quando Marla chama a atenção de Tyler."
+sinopse_breve = "Um homem insatisfeito com a vida cria um clube de luta secreto com um amigo."
+banner = "banner_10.jpg"
+banner_wide= "banner_wide_10.webp"
+genero = "Drama"
+nota_geral = 8.4
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_10.jpg", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_10.webp", description = "Banner" },
+    {id = 2, type = "youtube", data = "BdJKm16Co6M", description = "Trailer" }
+]
+
+
+[[filmes]]
+id = 12
+nome = "Futurama"
+data_lancamento = "1999"
+sinopse = "Fry era um entregador de pizza de 25 anos, cuja vida não tinha o menor significado. Depois de congelar-se acidentalmente na véspera do Ano Novo de 1999, ele acorda mil anos mais tarde, tendo a chance de começar tudo de novo em um futuro repleto de alienígenas misteriosos e de robôs ameaçadores."
+sinopse_breve = "Um entregador congelado acorda mil anos no futuro."
+banner = "banner_11.jpg"
+banner_wide= "banner_wide_11.jpg"
+genero = "Animação, Comédia, Ficção Científica"
+nota_geral = 8.4
+extra_content = [
+    {id = 0, type = "img", data = "banner/banner_11.jpg", description = "Banner" },
+    {id = 1, type = "img", data = "banner/banner_wide_11.jpg", description = "Banner" },
+    {id = 2, type = "youtube", data = "dUHzt5md1x0", description = "Trailer - 1º Temporada" },
+    {id = 3, type = "youtube", data = "AM8lGTeUUk4", description = "Trailer - 11º Temporada" }
+]
