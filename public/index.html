@@ -1,166 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- Metadata -->
+    <meta charset="UTF-8" />
+    <title>Absolute Cinema</title>
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap"
+      rel="stylesheet" />
+    <!-- Bootstrap CSS & JS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"></script>
+  </head>
 
-<head>
-  <!-- Metadata -->
-  <meta charset="UTF-8">
-  <title>Absolute Cinema</title>
-  <!-- Viewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Favicon -->
-  <link rel="icon" href="assets/img/favicon.ico">
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
-  <!-- Fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS & JS-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
-    </script>
-</head>
-
-<body data-bs-theme="dark">
-  <!-- Cabeçalho -->
-  <nav class="body-section body-header navbar navbar-expand-md bg-body-tertiary w-100">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img class="picture-logo" src="assets/img/icon.png">
-      </a>
-      <a class="navbar-brand logo-text text-center text-md-start py-0 mx-0 fs-6 text-wrap" href="/">
-        Absolute Cinema
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="trending.html" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Descobrir
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="trending/new.html">Novidades</a></li>
-              <li><a class="dropdown-item" href="trending/popular.html">Populares</a></li>
-              <li><a class="dropdown-item" href="trending/rated.html">Bem Avaliados</a></li>
-              <li><a class="dropdown-item" href="trending/genres.html">Gêneros</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="user/saved.html" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Salvos
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="user/playlists.html">Minhas Listas</a></li>
-              <li><a class="dropdown-item" href="user/favorites.html">Favoritos</a></li>
-              <li><a class="dropdown-item" href="user/watchlater.html">Assistir mais tarde</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-          <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
-  <div class="d-flex w-100 justify-content-center">
-    <!-- Conteúdo -->
-    <div class="avoid-large container-fluid m-0 g-0 p-2">
-
-      <!-- Seção 1: Itens em Destaque -->
-      <!-- TODO: const carousel = new bootstrap.Carousel('#myCarousel') -->
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="m-0 y-0">
-            <strong>Itens em destaque</strong>
-          </h5>
+  <body data-bs-theme="dark">
+    <!-- Cabeçalho -->
+    <nav class="body-section body-header navbar navbar-expand-md bg-body-tertiary w-100">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img class="picture-logo" src="assets/img/icon.png" />
+        </a>
+        <a
+          class="navbar-brand logo-text text-center text-md-start py-0 mx-0 fs-6 text-wrap"
+          href="/">
+          Absolute Cinema
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="trending.html"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Descobrir
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="trending/new.html">Novidades</a></li>
+                <li><a class="dropdown-item" href="trending/popular.html">Populares</a></li>
+                <li><a class="dropdown-item" href="trending/rated.html">Bem Avaliados</a></li>
+                <li><a class="dropdown-item" href="trending/genres.html">Gêneros</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="user/saved.html"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Salvos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="user/playlists.html">Minhas Listas</a></li>
+                <li><a class="dropdown-item" href="user/favorites.html">Favoritos</a></li>
+                <li>
+                  <a class="dropdown-item" href="user/watchlater.html">Assistir mais tarde</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Pesquisar"
+              aria-label="Search" />
+            <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+          </form>
         </div>
       </div>
+    </nav>
 
-      <section>
-        <div id="destaque" class="carousel slide" data-bs-ride="carousel">
-          <div id="carousel" class="carousel-inner rounded"></div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#destaque" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon black-text-white-background-button" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#destaque" data-bs-slide="next">
-            <span class="carousel-control-next-icon black-text-white-background-button" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-
-        </div>
-      </section>
-
-      <!-- Seção 2: Grupo de cards -->
-      <div class="card my-3">
-        <div class="card-body">
-          <h5 class="m-0 y-0">
-            <strong>Todos os itens</strong>
-          </h5>
-        </div>
-      </div>
-
-      <section>
-        <div id="cards-filmes" class="row row-cols-1 row-cols-md-2 g-4"></div>
-
-      </section>
-
-      <!-- Espaço vazio -->
-      <div class="mt-4">
-      </div>
-
-      <!-- Seção 3 - Informações sobre o autor -->
-      <div class="card my-3">
-        <div class="card-body">
-          <h5 class="m-0 y-0">
-            <strong>Informações do Aluno</strong>
-          </h5>
-        </div>
-      </div>
-
-      <section class="row p-1">
-        <div class="col-md-8">
-          <h6><strong>Sobre</strong></h6>
-          <hr>
-          <p>Sempre interessado na área da computação e independente da linguagem, busco sempre estar em
-            constante aprendizado.</p>
-        </div>
-
-        <div class="col-md-4">
-          <h6><strong>Autoria</strong></h6>
-          <hr>
-          <p>Aluno: Mateus J. S. Santana</p>
-          <p>Curso: Sistemas de Informação</p>
-          <p>Turma: Manhã</p>
-          <h6><strong>Redes Sociais</strong></h6>
-          <hr>
-          <div class="d-flex flex-row">
-            <a class="text-decoration-none" href="https://github.com/mateusjdev">
-              <img class="social-icon me-3" src="assets/img/social/github.svg">
-            </a>
-            <a class="text-decoration-none" href="https://gitlab.com/mateusjdev">
-              <img class="social-icon me-3" src="assets/img/social/gitlab.svg">
-            </a>
+    <div class="d-flex w-100 justify-content-center">
+      <!-- Conteúdo -->
+      <div class="avoid-large container-fluid m-0 g-0 p-2">
+        <!-- Seção 1: Itens em Destaque -->
+        <!-- TODO: const carousel = new bootstrap.Carousel('#myCarousel') -->
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="m-0 y-0">
+              <strong>Itens em destaque</strong>
+            </h5>
           </div>
         </div>
-      </section>
 
+        <section>
+          <div id="destaque" class="carousel slide" data-bs-ride="carousel">
+            <div id="carousel" class="carousel-inner rounded"></div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#destaque"
+              data-bs-slide="prev">
+              <span
+                class="carousel-control-prev-icon black-text-white-background-button"
+                aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#destaque"
+              data-bs-slide="next">
+              <span
+                class="carousel-control-next-icon black-text-white-background-button"
+                aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Seção 2: Grupo de cards -->
+        <div class="card my-3">
+          <div class="card-body">
+            <h5 class="m-0 y-0">
+              <strong>Todos os itens</strong>
+            </h5>
+          </div>
+        </div>
+
+        <section>
+          <div id="cards-filmes" class="row row-cols-1 row-cols-md-2 g-4"></div>
+        </section>
+
+        <!-- Espaço vazio -->
+        <div class="mt-4"></div>
+
+        <!-- Seção 3 - Informações sobre o autor -->
+        <div class="card my-3">
+          <div class="card-body">
+            <h5 class="m-0 y-0">
+              <strong>Informações do Aluno</strong>
+            </h5>
+          </div>
+        </div>
+
+        <section class="row p-1">
+          <div class="col-md-8">
+            <h6><strong>Sobre</strong></h6>
+            <hr />
+            <p>
+              Sempre interessado na área da computação e independente da linguagem, busco sempre
+              estar em constante aprendizado.
+            </p>
+          </div>
+
+          <div class="col-md-4">
+            <h6><strong>Autoria</strong></h6>
+            <hr />
+            <p>Aluno: Mateus J. S. Santana</p>
+            <p>Curso: Sistemas de Informação</p>
+            <p>Turma: Manhã</p>
+            <h6><strong>Redes Sociais</strong></h6>
+            <hr />
+            <div class="d-flex flex-row">
+              <a class="text-decoration-none" href="https://github.com/mateusjdev">
+                <img class="social-icon me-3" src="assets/img/social/github.svg" />
+              </a>
+              <a class="text-decoration-none" href="https://gitlab.com/mateusjdev">
+                <img class="social-icon me-3" src="assets/img/social/gitlab.svg" />
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
 
-  <!-- Montagem dinâmica do site -->
-  <script src="assets/scripts/index.js"></script>
-
-</body>
-
+    <!-- Montagem dinâmica do site -->
+    <script src="assets/scripts/index.js"></script>
+  </body>
 </html>

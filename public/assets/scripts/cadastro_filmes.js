@@ -8,7 +8,7 @@
 async function fileToBase64(file) {
     const reader = new FileReader();
 
-    return new Promise((resolve, reject) => {    
+    return new Promise((resolve, reject) => {
         reader.onload = () => resolve(reader.result);
         reader.onerror = reject;
         reader.readAsDataURL(file);
