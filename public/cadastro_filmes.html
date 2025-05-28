@@ -74,7 +74,8 @@
   </nav>
 
   <div id="content" class="d-flex w-100 justify-content-center p-3 flex-row">
-    <form id="form_cadastro_filme">
+    <!-- Evita o reload da página após o cadastro dos dados -->
+    <form id="form_cadastro_filme" onsubmit="{(e)=>e.preventDefault()}">
       <div id="thumbBackground" class="row m-0 p-0 g-0 rounded-2 thumbBackground border mb-3 banner-background-1">
         <div id="thumbBackdrop" class="row m-0 p-0 g-0 rounded-2 thumbBackdrop">
           <div class="col-4 d-flex flex-column justify-content-center m-0 g-0 p-1 avoid-large-picture
@@ -92,12 +93,12 @@
           </div>
           <div id="infoSection" class="col-8 d-flex align-items-start flex-column justify-content-center m-0 p-3 g-0">
             <div class="mb-3">
-              <label for="exampleFormControlFile1">Poster</label>
-              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              <label for="input_banner">Poster</label>
+              <input type="file" class="form-control-file w-100" id="input_banner">
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlFile2">Poster de fundo</label>
-              <input type="file" class="form-control-file" id="exampleFormControlFile2">
+              <label for="input_banner_wide">Poster de fundo</label>
+              <input type="file" class="form-control-file w-100" id="input_banner_wide">
             </div>
           </div>
         </div>

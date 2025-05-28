@@ -7,7 +7,7 @@ function getRandomMoviesId(filmes, quantidade) {
     let idFilmes = [];
 
     for (let i = 0; i < quantidade && i < filmes.length; ) {
-        let num = Math.floor(Math.random() * filmes.length);
+        const num = Math.floor(Math.random() * filmes.length);
         let unico = true;
 
         for (let j = 0; j < idFilmes.length && unico; j++) {
@@ -30,8 +30,8 @@ function adicionarConteudo(filmes) {
 
     // Adiciona cards ao menu de "Itens em destaque"
     for (let i = 0; i < arrIdFilmesAleatorios.length; i++) {
-        let id = arrIdFilmesAleatorios[i];
-        let infoFilme = filmes[id];
+        const id = arrIdFilmesAleatorios[i];
+        const infoFilme = filmes[id];
         let carouselClass = "carousel-item";
         if (i === 0) {
             // Configura o 1º card (index: 0) como ativo
@@ -56,7 +56,7 @@ function adicionarConteudo(filmes) {
 
     // Adiciona cards ao menu de "Todos os itens"
     for (let i = 0; i < filmes.length; i++) {
-        let infoFilme = filmes[i];
+        const infoFilme = filmes[i];
         /** @type {string} */
         let banner_wide = infoFilme.banner_wide || "banner_wide_default.png";
         // Se não é base64, insere o caminho relativo "assets/img/banner/"
