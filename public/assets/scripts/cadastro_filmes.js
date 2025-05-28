@@ -15,8 +15,17 @@ async function fileToBase64(file) {
     });
 }
 
-function clearURI() {
-    // TODO: Clear URI
+function clearURI(dontReload) {
+    // URL atual
+    const url_atual = new URL(window.location.href);
+    // Nova URL
+    const url_nova = `${url_atual.origin}${url_atual.pathname}`;
+    if (typeof dontReload === "boolean" && dontReload) {
+        history.replaceState({}, "", url_nova);
+        return;
+    }
+
+    window.location.href = url_nova;
 }
 
 /**
@@ -185,7 +194,7 @@ function setupCadastro(edit) {
     }
 
     // Reseta a form no carregamento da página/reload
-    form_cadastro_filme.reset()
+    form_cadastro_filme.reset();
 
     // Limpa imagens ao resetar form
     form_cadastro_filme.addEventListener("reset", () => {
@@ -361,6 +370,6 @@ function setupCadastro(edit) {
         }
     }
 
-    clearURI();
+    clearURI(true);
     setupCadastro();
 })();
