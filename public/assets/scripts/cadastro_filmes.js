@@ -15,7 +15,163 @@ async function fileToBase64(file) {
     });
 }
 
-(() => {
+function clearURI() {
+    // TODO: Clear URI
+}
+
+/**
+ * @param {number} id
+ */
+async function getFilme(id) {
+    if (typeof id !== "number") {
+        return;
+    }
+
+    // JSON com os dados do filme
+    return await fetch(`http://localhost:3000/filmes/${id}`)
+        .then((res) => res.json())
+        .catch((err) => console.error("Erro:", err));
+}
+
+/**
+ * @param {number} [edit]
+ */
+function setupCadastro(edit) {
+    /** @type {HTMLInputElement | null } */
+    // @ts-ignore HTMLElement casted as HTMLInputElement
+    const input_nome = document.getElementById("input_nome");
+    /** @type {HTMLInputElement | null } */
+    // @ts-ignore HTMLElement casted as HTMLInputElement
+    const input_data_lancamento = document.getElementById("input_data_lancamento");
+    /** @type {HTMLInputElement | null } */
+    // @ts-ignore HTMLElement casted as HTMLInputElement
+    const input_sinopse_breve = document.getElementById("input_sinopse_breve");
+    /** @type {HTMLInputElement | null } */
+    // @ts-ignore HTMLElement casted as HTMLInputElement
+    const input_sinopse = document.getElementById("input_sinopse");
+    /** @type {HTMLInputElement | null } */
+    // @ts-ignore HTMLElement casted as HTMLInputElement
+    const input_genero = document.getElementById("input_genero");
+    /** @type {HTMLInputElement | null } */
+    // @ts-ignore HTMLElement casted as HTMLInputElement
+    const input_nota = document.getElementById("input_nota");
+    /** @type {HTMLInputElement | null } */
+    // @ts-ignore HTMLElement casted as HTMLInputElement
+    const input_banner = document.getElementById("input_banner");
+    /** @type {HTMLInputElement | null } */
+    // @ts-ignore HTMLElement casted as HTMLInputElement
+    const input_banner_wide = document.getElementById("input_banner_wide");
+    /** @type {SVGElement | null } */
+    // @ts-ignore HTMLElement casted as HTMLInputElement
+    const banner_svg = document.getElementById("thumb_svg");
+    /** @type {HTMLImageElement | null } */
+    // @ts-ignore HTMLElement casted as HTMLInputElement
+    const banner_src = document.getElementById("thumb");
+    /** @type {HTMLDivElement | null } */
+    // @ts-ignore HTMLElement casted as HTMLInputElement
+    const banner_wide_src = document.getElementById("thumbBackground");
+
+    if (
+        !input_nome ||
+        !input_data_lancamento ||
+        !input_sinopse_breve ||
+        !input_sinopse ||
+        !input_genero ||
+        !input_nota ||
+        !input_banner ||
+        !input_banner_wide
+    ) {
+        console.log("Couldn't find one of the input fields!");
+        return;
+    }
+
+    input_banner?.addEventListener("change", async (event) => {
+        event.preventDefault();
+
+        if (!input_banner.files || !input_banner.files[0]) {
+            alert("Seleciona um arquivo de imagem para o poster!");
+            return;
+        }
+        const input_banner_file = input_banner.files[0];
+
+        if (!input_banner_file) {
+            alert("Uma das entradas não é valida!");
+            return;
+        }
+
+        const banner = await fileToBase64(input_banner_file);
+
+        if (
+            !banner ||
+            (typeof banner === "string" && !banner.startsWith("data:image/")) ||
+            banner instanceof ArrayBuffer
+        ) {
+            alert("O poster não é um arquivo de imagem!");
+            return null;
+        }
+
+        if (banner_src) banner_src.src = banner;
+        banner_svg?.classList.add("d-none");
+    });
+
+    input_banner_wide?.addEventListener("change", async (event) => {
+        event.preventDefault();
+
+        if (!input_banner_wide.files || !input_banner_wide.files[0]) {
+            alert("Seleciona um arquivo de imagem para o poster de fundo.");
+            return;
+        }
+        const input_banner_wide_file = input_banner_wide.files[0];
+
+        if (!input_banner_wide_file) {
+            alert("Uma das entradas não é valida!");
+            return;
+        }
+
+        const banner_wide = await fileToBase64(input_banner_wide_file);
+
+        if (
+            !banner_wide ||
+            (typeof banner_wide === "string" && !banner_wide.startsWith("data:image/")) ||
+            banner_wide instanceof ArrayBuffer
+        ) {
+            alert("O poster não é um arquivo de imagem!");
+            return null;
+        }
+
+        if (banner_wide_src) banner_wide_src.style.backgroundImage = `url(${banner_wide})`;
+    });
+
+    // prefillFields()
+    if (typeof edit === "number") {
+        getFilme(edit).then((filme) => {
+            if (!filme) return;
+
+            input_nome.value = filme.nome;
+            input_data_lancamento.value = filme.data_lancamento;
+            input_sinopse_breve.value = filme.sinopse_breve;
+            input_sinopse.value = filme.sinopse;
+            input_genero.value = filme.genero;
+            input_nota.value = filme.nota_geral;
+
+            let img_banner = filme.banner;
+            let img_banner_wide = filme.banner_wide;
+
+            if (!img_banner.startsWith("data:image/")) {
+                img_banner = `assets/img/banner/${img_banner}`;
+            }
+
+            if (!img_banner_wide.startsWith("data:image/")) {
+                img_banner_wide = `assets/img/banner/${img_banner_wide}`;
+            }
+
+            if (banner_src) banner_src.src = img_banner;
+            if (banner_wide_src) banner_wide_src.style.backgroundImage = `url(${img_banner_wide})`;
+
+            banner_svg?.classList.add("d-none");
+        });
+    }
+
     /** @type {HTMLButtonElement | null } */
     // @ts-ignore HTMLElement casted as HTMLButtonElement
     const cadastrar = document.getElementById("cadastrar");
@@ -28,45 +184,20 @@ async function fileToBase64(file) {
         return;
     }
 
-    cadastrar.addEventListener("click", async () => {
-        /** @type {HTMLInputElement | null } */
-        // @ts-ignore HTMLElement casted as HTMLInputElement
-        const input_nome = document.getElementById("input_nome");
-        /** @type {HTMLInputElement | null } */
-        // @ts-ignore HTMLElement casted as HTMLInputElement
-        const input_data_lancamento = document.getElementById("input_data_lancamento");
-        /** @type {HTMLInputElement | null } */
-        // @ts-ignore HTMLElement casted as HTMLInputElement
-        const input_sinopse_breve = document.getElementById("input_sinopse_breve");
-        /** @type {HTMLInputElement | null } */
-        // @ts-ignore HTMLElement casted as HTMLInputElement
-        const input_sinopse = document.getElementById("input_sinopse");
-        /** @type {HTMLInputElement | null } */
-        // @ts-ignore HTMLElement casted as HTMLInputElement
-        const input_genero = document.getElementById("input_genero");
-        /** @type {HTMLInputElement | null } */
-        // @ts-ignore HTMLElement casted as HTMLInputElement
-        const input_nota = document.getElementById("input_nota");
-        /** @type {HTMLInputElement | null } */
-        // @ts-ignore HTMLElement casted as HTMLInputElement
-        const input_banner = document.getElementById("input_banner");
-        /** @type {HTMLInputElement | null } */
-        // @ts-ignore HTMLElement casted as HTMLInputElement
-        const input_banner_wide = document.getElementById("input_banner_wide");
+    // Reseta a form no carregamento da página/reload
+    form_cadastro_filme.reset()
 
-        if (
-            !input_nome ||
-            !input_data_lancamento ||
-            !input_sinopse_breve ||
-            !input_sinopse ||
-            !input_genero ||
-            !input_nota ||
-            !input_banner ||
-            !input_banner_wide
-        ) {
-            console.log("Couldn't find one of the input fields!");
-            return;
-        }
+    // Limpa imagens ao resetar form
+    form_cadastro_filme.addEventListener("reset", () => {
+        if (banner_src) banner_src.src = "";
+        if (banner_wide_src) banner_wide_src.style.backgroundImage = "";
+
+        banner_svg?.classList.remove("d-none");
+    });
+
+    cadastrar.addEventListener("click", async (event) => {
+        // Evita o reload da página após o cadastro dos dados
+        event.preventDefault();
 
         const input_nome_value = input_nome.value;
         const input_data_lancamento_value = input_data_lancamento.value;
@@ -98,7 +229,7 @@ async function fileToBase64(file) {
             !input_banner_file ||
             !input_banner_wide_file
         ) {
-            console.log("One of the inputs is empty!");
+            alert("Uma das entradas não é valida!");
             return;
         }
 
@@ -108,7 +239,7 @@ async function fileToBase64(file) {
         if (
             !banner ||
             (typeof banner === "string" && !banner.startsWith("data:image/")) ||
-            Array.isArray(banner)
+            banner instanceof ArrayBuffer
         ) {
             alert("O poster não é um arquivo de imagem!");
             return null;
@@ -117,7 +248,7 @@ async function fileToBase64(file) {
         if (
             !banner_wide ||
             (typeof banner_wide === "string" && !banner_wide.startsWith("data:image/")) ||
-            Array.isArray(banner_wide)
+            banner_wide instanceof ArrayBuffer
         ) {
             alert("O poster de fundo não é um arquivo de imagem!");
             return null;
@@ -135,26 +266,101 @@ async function fileToBase64(file) {
             banner_wide: banner_wide,
         };
 
-        fetch("http://localhost:3000/filmes", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-            },
-            body: JSON.stringify(json_content),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                if (!data.id) {
-                    alert("O filme/série foi cadastrado com sucesso!");
-                } else {
-                    alert(`O filme/série foi cadastrado com sucesso!\nid: ${data.id}`);
-                }
-                form_cadastro_filme.reset();
+        if (typeof edit === "number") {
+            fetch(`http://localhost:3000/filmes/${edit}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify(json_content),
             })
-            .catch((error) => {
-                alert("Ocorreu um erro ao cadastro o filme/série!");
-                console.log(error);
-            });
+                .then((response) => response.json())
+                .then((data) => {
+                    if (!data.id) {
+                        alert("O filme/série foi atualizado com sucesso!");
+                    } else {
+                        alert(`O filme/série foi atualizado com sucesso!\nid: ${data.id}`);
+                    }
+                    form_cadastro_filme.reset();
+                })
+                .catch((error) => {
+                    alert("Ocorreu um erro ao atualizar o filme/série!");
+                    console.log(error);
+                });
+        } else {
+            fetch("http://localhost:3000/filmes", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify(json_content),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (!data.id) {
+                        alert("O filme/série foi cadastrado com sucesso!");
+                    } else {
+                        alert(`O filme/série foi cadastrado com sucesso!\nid: ${data.id}`);
+                    }
+                    form_cadastro_filme.reset();
+                    clearURI();
+                })
+                .catch((error) => {
+                    alert("Ocorreu um erro ao cadastro o filme/série!");
+                    console.log(error);
+                });
+        }
     });
+
+    if (edit) {
+        /** @type {HTMLButtonElement | null } */
+        // @ts-ignore HTMLElement casted as HTMLButtonElement
+        const excluir = document.getElementById("excluir");
+
+        if (!excluir) {
+            console.log("Não foi possível encontrar o botão de excluir!");
+            return;
+        }
+
+        // Habilita o botão de excluir
+        excluir.classList.remove("d-none");
+
+        excluir.addEventListener("click", async (event) => {
+            // Evita o reload da página após o cadastro dos dados
+            event.preventDefault();
+
+            fetch(`http://localhost:3000/filmes/${edit}`, { method: "DELETE" })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (!data.id) {
+                        alert("O filme/série foi excluido com sucesso!");
+                    } else {
+                        alert(`O filme/série foi excluido com sucesso!\nid: ${edit}`);
+                    }
+                    form_cadastro_filme.reset();
+                    clearURI();
+                })
+                .catch((error) => {
+                    alert("Ocorreu um erro ao excluir o filme/série!");
+                    console.log(error);
+                });
+        });
+    }
+}
+
+(() => {
+    const params = new URLSearchParams(location.search);
+    const edit = params.get("edit");
+    if (edit) {
+        const edit_int = parseInt(edit);
+        if (typeof edit_int === "number") {
+            setupCadastro(edit_int);
+            return;
+        }
+    }
+
+    clearURI();
+    setupCadastro();
 })();
