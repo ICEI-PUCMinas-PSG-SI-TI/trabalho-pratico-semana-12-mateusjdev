@@ -10,17 +10,14 @@ Nesta atividade, você irá completar o projeto anterior permitindo cadastrar e 
 - Proposta de projeto escolhida:
 - Breve descrição sobre seu projeto:
 
-**Print do testes da API com Postman ou similar**
+### Print do testes da API com Postman ou similar
 
-<<  COLOQUE A IMAGEM GET AQUI >>
+![GET](docs/images/GET.png)
+![POST](docs/images/POST.png)
+![PUT](docs/images/PUT.png)
+![DELETE](docs/images/DELETE.png)
 
-<<  COLOQUE A IMAGEM POST AQUI >>
-
-<<  COLOQUE A IMAGEM PUT AQUI >>
-
-<<  COLOQUE A IMAGEM DELETE AQUI >>
-
-**Print da aba NETWORK com requisições Fetch/XHR de POST**
+### Print da aba NETWORK com requisições Fetch/XHR de POST
 
 <<  COLOQUE A IMAGEM AQUI >>
 
