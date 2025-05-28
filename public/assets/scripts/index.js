@@ -38,9 +38,10 @@ function adicionarConteudo(filmes) {
             carouselClass += " active";
         }
 
+        let banner_wide = infoFilme.banner_wide || "banner_wide_default.png";
         document.getElementById("carousel").innerHTML += `<div class="${carouselClass}">
                       <a class="text-decoration-none" href="/detalhes.html?id=${infoFilme.id}">
-                          <img src="assets/img/banner/${infoFilme.banner_wide}" class="d-block w-100">
+                          <img src="assets/img/banner/${banner_wide}" class="d-block w-100">
                           <div class="carousel-caption black-text-white-background p-1 p-md-3">
                               <h5 class="m-0 p-0">${infoFilme.nome}</h5>
                               <p class="d-none d-md-block mt-1 m-0 p-0">${infoFilme.sinopse_breve}</p>
@@ -52,9 +53,10 @@ function adicionarConteudo(filmes) {
     // Adiciona cards ao menu de "Todos os itens"
     for (let i = 0; i < filmes.length; i++) {
         let infoFilme = filmes[i];
+        let banner_wide = infoFilme.banner_wide || "banner_wide_default.png";
         document.getElementById("cards-filmes").innerHTML += `<div class="col">
                       <a class="card h-100 text-decoration-none" href="/detalhes.html?id=${infoFilme.id}">
-                          <img src="assets/img/banner/${infoFilme.banner_wide}" class="card-img-top">
+                          <img src="assets/img/banner/${banner_wide}" class="card-img-top">
                           <div class="card-body">
                               <h5 class="card-title">${infoFilme.nome}</h5>
                               <p class="card-text">${infoFilme.sinopse_breve}</p>

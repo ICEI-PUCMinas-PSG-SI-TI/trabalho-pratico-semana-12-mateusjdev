@@ -1,3 +1,5 @@
+// @ts-check
+
 let params = new URLSearchParams(location.search);
 let id = params.get("id");
 
@@ -7,13 +9,16 @@ function adicionarDetalhes(filme) {
     if (!filme) return;
 
     if (filme) {
-        document.getElementById("thumb").src = `assets/img/banner/${filme.banner}`;
+        let banner = filme.banner || "banner_default.png";
+        let banner_wide = filme.banner_wide || "banner_wide_default.png";
+        document.getElementById("thumb").src = `assets/img/banner/${banner}`;
         document.getElementById("thumbBackground").style.backgroundImage =
-            `url(assets/img/banner/${filme.banner_wide})`;
+            `url(assets/img/banner/${banner_wide})`;
         document.getElementById("titulo").innerText = filme.nome;
 
         let nota = document.getElementById("nota");
-        let nota_text = " ⭐".repeat(filme.nota_geral);
+        // * Pode gerar NaN
+        let nota_text = " ⭐".repeat(parseInt(filme.nota_geral));
         nota.innerText = nota_text.trim();
 
         // Se possui algum conteúdo, habilitar os extras
@@ -67,35 +72,36 @@ function adicionarDetalhes(filme) {
         document.getElementById("genero").innerText = filme.genero;
         document.getElementById("data_lancamento").innerText = filme.data_lancamento;
         document.getElementById("sinopse").innerText = filme.sinopse;
-    } else {
-        document.getElementById("info").innerHTML = `<div class="card mb-3">
-                <div class="card-body">
-                    
-                    <div class="row">
-                        <div class="col d-flex justify-content-center align-items-start">
-                            <img id="thumb" class="warning-icon" src="assets/img/icons/warning.svg" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col d-flex flex-column justify-content-center align-items-center">
-                            <h5>
-                                NÂO FOI POSSÍVEL IDENTIFICAR O FILME!
-                            </h5>
-                            <p>
-                                Possívelmente os dados para esta id não foram encontrados! Verifique se a id informada esta correta!
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            
-            <div>
-                <div class="col d-flex justify-content-center align-items-center">
-                    <a class="btn btn-primary" href="/" role="button">Voltar à página inicial</a>
-                </div>
-            </div>`;
+        return;
     }
+
+    document.getElementById("info").innerHTML = `<div class="card mb-3">
+            <div class="card-body">
+                
+                <div class="row">
+                    <div class="col d-flex justify-content-center align-items-start">
+                        <img id="thumb" class="warning-icon" src="assets/img/icons/warning.svg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col d-flex flex-column justify-content-center align-items-center">
+                        <h5>
+                            NÂO FOI POSSÍVEL IDENTIFICAR O FILME!
+                        </h5>
+                        <p>
+                            Possívelmente os dados para esta id não foram encontrados! Verifique se a id informada esta correta!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <a class="btn btn-primary" href="/" role="button">Voltar à página inicial</a>
+            </div>
+        </div>`;
 }
 
 // TODO: Validar id anteriormente
