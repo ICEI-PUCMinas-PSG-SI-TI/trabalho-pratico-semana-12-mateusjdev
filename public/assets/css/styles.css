@@ -59,7 +59,7 @@ h6 {
 
 .thumbBackground {
     background-position: center;
-    background-size: contain;
+    background-size: cover;
 }
 
 .thumbBackdrop {
@@ -104,4 +104,22 @@ h6 {
 
 .overflow-wrap-break-word {
     overflow-wrap: break-word;
+}
+
+.movie-cover {
+    object-fit: cover;
+    max-height: 15em;
+    aspect-ratio: 12/5;
+}
+
+#carousel {
+    aspect-ratio: 12/5;
+}
+#carousel div.carousel-item {
+    height: 100%;
+}
+
+#carousel img {
+    height: 100%;
+    object-fit: cover;
 }

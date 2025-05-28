@@ -65,7 +65,7 @@ function adicionarConteudo(filmes) {
         }
         document.getElementById("cards-filmes").innerHTML += `<div class="col">
                       <a class="card h-100 text-decoration-none" href="/detalhes.html?id=${infoFilme.id}">
-                          <img src="${banner_wide}" class="card-img-top">
+                          <img src="${banner_wide}" class="card-img-top movie-cover">
                           <div class="card-body">
                               <h5 class="card-title">${infoFilme.nome}</h5>
                               <p class="card-text">${infoFilme.sinopse_breve}</p>
