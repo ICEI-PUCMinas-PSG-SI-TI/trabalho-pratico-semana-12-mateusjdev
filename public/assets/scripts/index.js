@@ -64,7 +64,7 @@ function adicionarConteudo(filmes) {
                     <img src="${banner_wide}" class="d-block w-100">
                     <div class="carousel-caption black-text-white-background p-1 p-md-3">
                         <h5 class="m-0 p-0">${infoFilme.nome}</h5>
-                        <p class="d-none d-md-block mt-1 m-0 p-0">${infoFilme.sinopse_breve}</p>
+                        <p class="d-none d-md-block mt-1 m-0 p-0">${infoFilme.sinopse_breve || "..."}</p>
                     </div>
                 </a>
             </div>`;
@@ -87,7 +87,7 @@ function adicionarConteudo(filmes) {
                         <img src="${banner_wide}" class="card-img-top movie-cover">
                         <div class="card-body">
                             <h5 class="card-title">${infoFilme.nome}</h5>
-                            <p class="card-text">${infoFilme.sinopse_breve}</p>
+                            <p class="card-text">${infoFilme.sinopse_breve || "..."}</p>
                         </div>
                     </a>
                 </div>`;
