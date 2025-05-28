@@ -55,6 +55,8 @@ function adicionarDetalhes(filme) {
     const html_data_lancamento = document.getElementById("data_lancamento");
     const html_sinopse = document.getElementById("sinopse");
 
+    const html_edit = document.getElementById("edit");
+
     if (
         !html_thumb ||
         !html_thumb_background ||
@@ -62,9 +64,23 @@ function adicionarDetalhes(filme) {
         !html_nota ||
         !html_genero ||
         !html_data_lancamento ||
-        !html_sinopse
+        !html_sinopse ||
+        !html_edit
     )
         return;
+
+    html_edit.addEventListener("click", () => {
+        if (!filme.id) return;
+        
+        // URL atual
+        const url = new URL(window.location.href);
+        // Parametros
+        const params = new URLSearchParams(`edit=${filme.id}`);
+        // Nova URL
+        const newUrl = `${url.origin}/cadastro_filmes.html?${params.toString()}`;
+
+        window.location.href = newUrl;
+    });
 
     let banner = filme.banner || "banner_default.png";
     let banner_wide = filme.banner_wide || "banner_wide_default.png";
